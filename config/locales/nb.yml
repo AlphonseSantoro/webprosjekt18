@@ -17,3 +17,51 @@ nb:
     arrival_stop: "Avgangsstop"
     departure_stop: "Ankomststop"
     current_address: "Min posisjon"
+  Kvadraturen:
+      weekdays: "Man - Fre"
+      weekend: "Lør - Søn"
+      telephone: "Tlf"
+      employees: "Ansatte"
+      Address: "Adresse"
+      Norway: "Norge"
+      Area: "Nærområdet"
+      Groceries: "Matbutikker"
+      Restuarants: "Spisesteder"
+      FastFood: "Hurtigmat"
+      Auditorium: "Campus Kvadraturen har auditorium i flere av skolens bygg. Du finner de i Kirkegata 24 - 26 og Prinsens gate 7 - 9."
+      Canteen: "Kantine"
+      CanteenInfo: "Campus Kvadraturen har egen kantine for studenter. Ligger i samme bygg som Campus Kvadraturens studentbar i Kirkegata 22 - 24."
+      StudentBar: "Studentbaren Hvelvet har lokaler i Oslos eldste bankhvelv og har inngang i Kirkegata 22 - 24. Hvelvet har åpent hver torsdag fra 18.00 - 03.00."
+  vulkan:
+    cafeteria: "Kantine"
+    library: "Bibloteket"
+    auditorium: "Auditorium"
+    fastfood: "Hurtigmat"
+    dining: "Spisesteder"
+    grocery: "Matbutikker"
+    employee: "Ansatte"
+    localarea: "Nærområdet"
+    info-banner: "
+Her finner du campus med en avdeling på Film, TV og Spill. Campus Vulkan ligger nærme Grunerløkka med masse aktiviter som kan bli insperert til skoleprosjekt."
+    weekdays: "Man-Fre"
+    weekend: "Lør-Søn"
+    loc-audi: "Ligger nede i -1 etg. (VU06)"
+    loc-cafe: "Ligger i enden av første etasje"
+    loc-lib: "Ligger i første etasje ved siden av heisene."
+    address: "Adresse"
+  fjerdingen:
+    weekdays: Man-Fre
+    weekends: Lør-Søn
+    telephone: Tlf
+    employees: Ansatte
+    address: Adresse
+    norway: Norge
+    surroundings: Nærområdet
+    stores: Matbutikker
+    restaurants: Spisesteder
+    fastfood: Hurtigmat
+    auddesc: Første etasje, ved inngangen(F101)
+    cantine: Kantine
+    bar: Studentbar
+    thursday: Torsdag
+    friday: Fredag

@@ -1,11 +1,12 @@
 <!-- BANNER -->
 <div id="banner">
   <!-- BILDE HER -->
-  <%= image_tag 'vulkan_banner.jpg', id: 'campus_banner' %>
+  <%= image_tag 'campus_vulkan.jpg', id: 'campus_banner' %>
   <!-- BANNER TEKST HER-->
   <div class="col-md-6 col-lg-6 pl-md-5 pl-lg-5 pl-3 text-light" id="banner_text">
     <h1 id="klasse_tittel">Campus</h1>
     <h2 id="campus_tittel">Vulkan</h2>
+    <p id="info_banner"><%= t('vulkan.info-banner').capitalize %>
   </div>
 </div>
 <div class="container-fluid pl-5 pr-5 pt-5 position-relative background-daisy">
@@ -13,37 +14,37 @@
   <div class="row pb-md-3 pb-lg-3">
     <div class="col-md-4 col-lg-4 col-12">
       <h2><%= t('opening_hours').capitalize %></h2>
-      <p>Man–fre: 07.30 – 23.00<br>
-        Lør–søn: 09.00 – 17.00</p>
+      <p><%= t('vulkan.weekdays').capitalize %>: 07.30 – 23.00<br>
+        <%= t('vulkan.weekend').capitalize %>: 09.00 – 17.00</p>
     </div>
 
     <div class="col-md-4 col-lg-4 col-12">
-      <h2>Ansatte</h2>
+      <h2><%= t('vulkan.employee').capitalize %></h2>
       <p class="pt-2">
-        Man–fre: 08.00 – 16.00</p>
+        <%= t('vulkan.weekdays').capitalize %>: 08.00 – 16.00</p>
     </div>
 
     <div class="col-md-4 col-lg-4 col-12">
-      <h2>Adresse</h2>
-      <p>Kirkegata 24-26<br>0153 Oslo<br>Norge</p>
+      <h2><%= t('vulkan.address').capitalize %></h2>
+      <p>Vulkan 19<br>0178 Oslo<br>Norge</p>
     </div>
   </div>
   <!-- NÆR INFORMASJON -->
   <div class="row">
     <div class="col-md-4 col-lg-4 card col-12 background_red mr-md-5 mr-lg-5 text-light p-0">
       <div class="card card-header">
-        <h2><u>Nærområdet:</u></h2>
+        <h2><u><%= t('vulkan.localarea').capitalize %>:</u></h2>
       </div>
       <div class="card card-body background_red">
-        <div>Matbutikker</div>
+        <div><%= t('vulkan.grocery').capitalize %></div>
         <ul>
-          <li>Rema 1000 (Vulkan</li>
+          <li>Rema 1000 (Vulkan)</li>
           <li>Coop Mega (Alexander Kiellands plass)</li>
           <li>Kiwi (Fredesborg)</li>
         </ul>
       </div>
       <div class="card card-body background_red">
-        <div>Spisesteder</div>
+        <div><%= t('vulkan.dining').capitalize %></div>
         <ul>
           <li>Mathallen Oslo</li>
           <li>Døgnvill Burger Vulkan</li>
@@ -51,7 +52,7 @@
         </ul>
       </div>
       <div class="card card-body background_red">
-        <div>Hurtigmat</div>
+        <div><%= t('vulkan.fastfood').capitalize %></div>
         <ul>
           <li>McDonald's</li>
           <li>Grytelokket Avd Storgata</li>
@@ -67,18 +68,19 @@
   <!-- PRAKTISK INFO -->
   <div class="row pt-5 pb-3">
     <div class="col-md-4 col-lg-4 col-12">
-      <h1>Auditorium</h1>
-      <p>Ligger nede i kjelleren</p>
+      <h1><%= t('vulkan.auditorium').capitalize %></h1>
+      <p><%= t('vulkan.loc-audi').capitalize %></p>
     </div>
 
     <div class="col-md-4 col-lg-4 col-12">
-      <h1>Kantina</h1>
-      <p>Ligger i innerst av 1 etg.</p>
+      <h1><%= t('vulkan.cafeteria').capitalize %></h1>
+      <p><%= t('vulkan.loc-cafe').capitalize %></p>
+      <p><%= t('vulkan.weekdays').capitalize %>: 10-16</p>
     </div>
 
     <div class="col-md-4 col-lg-4 col-12">
-      <h1>Bibloteket </h1>
-      <p>Ligger i 1 etg. ved inngangen</p>
+      <h1><%= t('vulkan.library').capitalize %> </h1>
+      <p><%= t('vulkan.loc-lib').capitalize %></p>
     </div>
   </div>
 </div> <!-- END BODY DIV -->
