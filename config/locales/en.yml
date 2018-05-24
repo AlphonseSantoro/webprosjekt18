@@ -48,3 +48,19 @@ en:
     loc-cafe: "Located inner side at floor 1."
     loc-lib: "Located at first floor nearby entrance."
     address: "address"
+  fjerdingen:
+    weekdays: Mon-fri
+    weekends: Sat-sun
+    telephone: Tel
+    employees: Employees
+    address: Address
+    norway: Norway
+    surroundings: Surroundings
+    stores: Grocery stores
+    restaurants: Restaurants
+    fastfood: Fast food
+    auddesc: Ground floor, by the entrence(F101)
+    cantine: Cantina
+    bar: Student bar
+    thursday: Thursday
+    friday: Friday
