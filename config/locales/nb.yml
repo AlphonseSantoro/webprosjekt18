@@ -29,10 +29,12 @@ nb:
     exams: "Eksamen"
     invoice: "Faktura"
     employees: "Ansatte"
-    offers: "tilbud"
+    services: "tilbud"
     counsellor: "Rådgiver"
     health: "Lege"
     dentist: "Tanlege"
+    week_offers: "Ukas' Mat tilbud"
+    info: "Mer informasjon på"
 
     employees: "Ansatte"
     services: "tilbud"
