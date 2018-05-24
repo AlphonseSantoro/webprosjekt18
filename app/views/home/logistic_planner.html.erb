@@ -21,29 +21,29 @@
         <div class="col-12 col-md-6 col-lg-6">
           <div class="row">
             <div id="travel" class="col-12 col-md-12 col-lg-12 collapse <%= params[:position].nil? ? 'show' : '' %>" data-parent="#parent-travel">
-              <%= form_tag '/logistics', method: :get, class: 'pl-5 pt-md-4' do %>
+              <%= form_tag '/logistics', method: :get, class: 'pl-5 pt-lg-4' do %>
                 <div class="row">
-                  <div class="col-12 col-md-5 col-lg-5">
-                    <%= label_tag t('from') %>
-                    <%= select_tag 'from', options_for_select(@from.collect {|b| [b[:name], b[:address]]}, params[:from]),
-                                   class: 'btn select-button background_red outline-gold-hover',
+                  <div class="col-12 col-md-12 col-lg-5">
+                    <%= label_tag t('from'), nil, class: 'text-dark text-size-large' %>
+                    <%= select_tag 'from', options_for_select(@from.collect {|b| [b[:name], b[:address]]}, value: params[:from], class: 'text-size-large'),
+                                   class: 'btn select-button border-red background-daisy outline-gold-hover p-4 select-text-size',
                                    onChange: 'this.form.submit();' %>
                   </div>
-                  <div class="col-12 col-md-5 col-lg-5">
-                    <%= label_tag t('to') %>
+                  <div class="col-12 col-md-12 col-lg-5">
+                    <%= label_tag t('to'), nil, class: 'text-dark text-size-large' %>
                     <%= select_tag 'to', options_for_select(@to.collect {|b| [b[:name], b[:address]]}, params[:to]),
-                                   class: 'btn select-button background_red outline-gold-hover',
+                                   class: 'btn select-button border-red background-daisy outline-gold-hover p-4 select-text-size',
                                    onChange: 'this.form.submit();' %>
                   </div>
                 </div>
               <% end %>
             </div>
             <div id="travel2" class="col-12 col-md-12 col-lg-12 collapse <%= params[:position].nil? ? '' : 'show' %>" data-parent="#parent-travel">
-              <%= form_tag '/logistics', method: :get, class: 'pl-5 pt-md-4' do %>
+              <%= form_tag '/logistics', method: :get, class: 'pl-5 pt-lg-4' do %>
                 <%= hidden_field_tag 'location', params[:location] %>
-                <%= label_tag "#{t('logistics.travel')} #{t('to')}" %>
+                <%= label_tag "#{t('logistics.travel')} #{t('to')}", nil, class: 'text-dark text-size-large' %>
                 <%= select_tag 'position', options_for_select(@all.collect {|b| [b[:name], b[:address]]}, params[:position]),
-                               class: 'btn select-button btn-outline-dark',
+                               class: 'btn select-button border-red background-daisy outline-gold-hover p-4 text-size-large',
                                onChange: 'locateUser("location"); this.form.submit();' %>
               <% end %>
             </div>
