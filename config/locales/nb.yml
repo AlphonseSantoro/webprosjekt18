@@ -19,7 +19,7 @@ nb:
     arrival_stop: "Avgangsstop"
     departure_stop: "Ankomststop"
     current_address: "Min posisjon"
-main:
+  main:
     collage: "Høyskolen"
     contact_info: "Kontakt informasjon"
     phone: "Telefon"
@@ -28,6 +28,12 @@ main:
     active_students: "Aktiv studenter"
     exams: "Eksamen"
     invoice: "Faktura"
+    employees: "Ansatte"
+    offers: "tilbud"
+    counsellor: "Rådgiver"
+    health: "Lege"
+    dentist: "Tanlege"
+
     employees: "Ansatte"
     services: "tilbud"
     counsellor: "Rådgiver"

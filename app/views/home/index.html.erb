@@ -3,7 +3,7 @@
 <div id="mainBanner">
   <!-- BANNER TEKST HER-->
   <div class="col-md-6 col-lg-6 pl-md-5 pl-lg-5 pl-3 pb-5 mb-5 text-light" id="banner_text">
-    <h1><%= t('collage')%> Kristiana</h1>
+    <h1><%= t('main.collage')%> Kristiana</h1>
     <p>Velkommen til studenthjelpern for alle som går her. Vi har ikke alltid like lett for å finne frem i stor by, også
       for oss som har gått her en stund!
       For det er jo ikke alltid vi har nok tid til å utforske det som er rundt! Her er det perfekte verktøyet for deg
@@ -49,21 +49,21 @@
         <div class="card card-body background_red pl-md-5 pl-lg-5 pl-3">
           <div><u>Mail Liste:</u></div>
           <ul>
-            <li><%= mail_to("student@kristiania.no" ) %>(<%= t('main.active_students')%>)</li>
-            <li><%= mail_to("eksamen@kristiania.no") %>(<%= t('main.exams')%>)</li>
-            <li><%= mail_to("faktura@kristiania.no") %>(<%= t('main.invoice') %>)</li>
-            <li><a href="https://kristiania.no/ansatte" class="text-light">Ansatte</a></li>
+            <li><%= mail_to("student@kristiania.no", nil, class: 'text-light') %>(<%= t('main.active_students')%>)</li>
+            <li><%= mail_to("eksamen@kristiania.no", nil, class: 'text-light') %>(<%= t('main.exams')%>)</li>
+            <li><%= mail_to("faktura@kristiania.no", nil, class: 'text-light') %>(<%= t('main.invoice') %>)</li>
+            <li><a href="https://kristiania.no/ansatte" class="text-light"><%= t('main.employees')%></a></li>
           </ul>
         </div>
       </div>
       <!-- delt i to -->
       <div class="col-md-3 col-lg-3 ml-lg-4 mr-lg-4 ml-md-2 mr-md-2 card card-body col-12 background_red text-light p-0">
         <div class="card card-body background_red pl-md-5 pl-lg-5 pl-3">
-          <div><u>SiO Tilbud:</u></div>
+          <div><u>SiO <%= t('offers')%>:</u></div>
           <ul>
-            <li><a href="https://www.sio.no/helse/radgivning" class="text-light">Rådgivning</a></li>
-            <li><a href="https://www.sio.no/helse" class="text-light">Lege</a></li>
-            <li><a href="https://www.sio.no/helse/tannlege" class="text-light">Tannlege</a></li>
+            <li><a href="https://www.sio.no/helse/radgivning" class="text-light"><%= t('main.counsellor')%></a></li>
+            <li><a href="https://www.sio.no/helse" class="text-light"> <%= t('main.health')%> </a></li>
+            <li><a href="https://www.sio.no/helse/tannlege" class="text-light"><%= t('main.dentist')%></a></li>
           </ul>
         </div>
       </div>

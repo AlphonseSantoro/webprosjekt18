@@ -20,27 +20,27 @@ en:
     departure_stop: "departure stop"
     current_address: "my location"
   main:
-      collage: "Collage"
-      contact_info: "Contact information"
-      phone: "Phone"
-      opening_hours: "Opening hours"
-      reception: "reception"
-      active_students: "Active students"
-      exams: "Exams"
-      invoice: "Invoice"
-      employees: "Employees"
-      services: "offers"
-      counsellor: "Student counsellor"
-      health: "Health Services"
-      dentist: "Dentist"
-      week_offers: "This weeks offers"
-      info: "More information on"
-      operator: "Central operator for all campuses"
-      header_text: "Welcome to the student assistant for anyone who attends. It's not always easy to find the way in the big city,
-                    even for those who has attended the school for a while.
-                    Because we do not always have enough time to explore what's around! Here is the perfect tool for those
-                    who wants info about what's around and how to find the best way to travel between the campuses!"
-      mail_list: "Contact e-mails"
+     collage: "Collage"
+     contact_info: "Contact information"
+     phone: "Phone"
+     opening_hours: "Opening hours"
+     reception: "reception"
+     active_students: "Active students"
+     exams: "Exams"
+     invoice: "Invoice"
+     employees: "Employees"
+     services: "offers"
+     counsellor: "Student counsellor"
+     health: "Health Services"
+     dentist: "Dentist"
+     week_offers: "This weeks offers"
+     info: "More information on"
+     operator: "Central operator for all campuses"
+     header_text: "Welcome to the student assistant for anyone who attends. It's not always easy to find the way in the big city,
+                   even for those who has attended the school for a while.
+                   Because we do not always have enough time to explore what's around! Here is the perfect tool for those
+                   who wants info about what's around and how to find the best way to travel between the campuses!"
+     mail_list: "Contact e-mails"
   Kvadraturen:
       weekdays: "Mon - Fri"
       weekend: "Sat - Sun"
