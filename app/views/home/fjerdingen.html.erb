@@ -13,30 +13,30 @@
   <div class="row pb-md-3 pb-lg-3">
     <div class="col-md-4 col-lg-4 col-12">
       <h2><%= t('opening_hours').capitalize %></h2>
-      <p>Man–fre: 08.00 – 24.00<br>
-        Lør–søn: 10.00 – 23.00<br>
-        Tlf: 22 59 60 00</p>
+      <p><%= t('fjerdingen.weekdays')%>: 08.00 – 24.00<br>
+         <%= t('fjerdingen.weekends')%>: 10.00 – 23.00<br>
+        <%= t('fjerdingen.telephone')%>: 22 59 60 00</p>
     </div>
 
     <div class="col-md-4 col-lg-4 col-12">
-      <h2>Ansatte</h2>
+      <h2><%= t('fjerdingen.employees')%></h2>
       <p class="pt-2">
-        Man–fre: 08.00 – 16.00</p>
+        <%= t('fjerdingen.weekdays')%>: 08.00 – 16.00</p>
     </div>
 
     <div class="col-md-4 col-lg-4 col-12">
-      <h2>Adresse</h2>
-      <p>Chr. Krohgs gate 32<br>0186 Oslo<br>Norge</p>
+      <h2><%= t('fjerdingen.address')%></h2>
+      <p>Chr. Krohgs gate 32<br>0186 Oslo<br><%= t('fjerdingen.norway')%></p>
     </div>
   </div>
   <!-- NÆR INFORMASJON -->
   <div class="row">
     <div class="col-md-4 col-lg-4 card col-12 background_red mr-md-5 mr-lg-5 text-light p-0">
       <div class="card card-header">
-        <h2><u>Nærområdet:</u></h2>
+        <h2><u><%= t('fjerdingen.surroundings')%>:</u></h2>
       </div>
       <div class="card card-body background_red">
-        <div>Matbutikker</div>
+        <div><%= t('fjerdingen.stores')%></div>
         <ul>
           <li>Food Express</li>
           <li>Coop Prix (Hausmannsgate)</li>
@@ -44,14 +44,14 @@
         </ul>
       </div>
       <div class="card card-body background_red">
-        <div>Spisesteder</div>
+        <div><%= t('fjerdingen.restaurants')%></div>
         <ul>
           <li>Südøst</li>
           <li>Freddy Fuego Hausmannsgate</li>
         </ul>
       </div>
       <div class="card card-body background_red">
-        <div>Hurtigmat</div>
+        <div><%= t('fjerdingen.fastfood')%></div>
         <ul>
           <li>Burger King Torggata</li>
           <li>Dominos - Schousplass</li>
@@ -67,18 +67,18 @@
   <div class="row pt-5 pb-3">
     <div class="col-md-4 col-lg-4 col-12">
       <h1>Auditorium</h1>
-      <p>Første etasje, ved inngangen(F101)</p>
+      <p><%= t('fjerdingen.auddesc')%></p>
     </div>
 
     <div class="col-md-4 col-lg-4 col-12">
-      <h1>Kantine</h1>
+      <h1><%= t('fjerdingen.cantine')%></h1>
       <p>10:00-15:00</p>
     </div>
 
     <div class="col-md-4 col-lg-4 col-12">
-      <h1>Studentbar - Skjenkestua</h1>
-      <p>Torsdag: 05:00-12:00</p>
-      <p>Fredag: 03:00-12:00</p>
+      <h1><%= t('fjerdingen.bar')%></h1>
+      <p><%= t('fjerdingen.thursday')%>: 05:00-12:00</p>
+      <p><%= t('fjerdingen.friday')%>: 03:00-12:00</p>
     </div>
   </div>
 </div> <!-- END BODY DIV -->

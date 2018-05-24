@@ -49,3 +49,19 @@ Her finner du campus med en avdeling på Film, TV og Spill. Campus Vulkan ligger
     loc-cafe: "Ligger i 1 etg. ved inngangen."
     loc-lib: "Located at first floor nearby entrance."
     address: "adresse"
+  fjerdingen:
+    weekdays: Man-fre
+    weekends: Lør-søn
+    telephone: Tlf
+    employees: Ansatte
+    address: Adresse
+    norway: Norge
+    surroundings: Nærområdet
+    stores: Matbutikker
+    restaurants: Spisesteder
+    fastfood: Hurtigmat
+    auddesc: Første etasje, ved inngangen(F101)
+    cantine: Kantine
+    bar: Studentbar
+    thursday: Torsdag
+    friday: Fredag
