@@ -17,3 +17,6 @@ nb:
     arrival_stop: "Avgangsstop"
     departure_stop: "Ankomststop"
     current_address: "Min posisjon"
+  vulkan:
+    cafeteria: "kantina"
+    library: "bibloteket"
