@@ -47,6 +47,7 @@ nb:
     loc-cafe: "Ligger i enden av første etasje"
     loc-lib: "Ligger i første etasje ved siden av heisene."
     address: "Adresse"
+    country: "Norge"
   fjerdingen:
     weekdays: Man-Fre
     weekends: Lør-Søn

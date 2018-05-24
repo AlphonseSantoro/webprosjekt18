@@ -47,6 +47,7 @@ en:
     loc-cafe: "Located at the far end of the ground floor."
     loc-lib: "Located at the ground floor by the elevators."
     address: "Address"
+    contry: "Norway"
   fjerdingen:
     weekdays: Mon-Fri
     weekends: Sat-Sun
