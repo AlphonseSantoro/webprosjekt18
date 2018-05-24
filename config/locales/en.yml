@@ -7,6 +7,8 @@ en:
   to: "to"
   between: "between"
   available_bikes: "available bikes"
+  monday: "Monday"
+  friday: "Friday"
   logistics:
     travel: "travel"
     my_location: "my location"

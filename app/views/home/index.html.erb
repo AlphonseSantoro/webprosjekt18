@@ -38,9 +38,9 @@
         <p>Felles sentralbord for all campus (kl. 08.00-15.30):<br>
           <%= t('telephone')%>: 22 05 75 50<br><br>
           <%= t('main.opening_hours')%> <%= t('reception')%>:<br>
-          Mandag - fredag: 08.00-16.00<br><br>
-          Campus' åpningstider:<br>
-          Mandag - fredag: 16.00-00.00</p>
+          <%= t('monday')%> - <%= t('friday')%>: 08.00-16.00<br><br>
+          Campus' <%= t('main.opening_hours')%>:<br>
+          <%= t('monday')%> - <%= t('friday')%>: 16.00-00.00</p>
       </div>
     </div>
     <!-- Student Tilbud -->
@@ -49,8 +49,8 @@
         <div class="card card-body background_red pl-md-5 pl-lg-5 pl-3">
           <div><u>Mail Liste:</u></div>
           <ul>
-            <li><%= mail_to("student@kristiania.no") %>(Aktiv studenter)</li>
-            <li><%= mail_to("eksamen@kristiania.no") %>(Eksamen)</li>
+            <li><%= mail_to("student@kristiania.no") %>(<%= t('active_students')%>)</li>
+            <li><%= mail_to("eksamen@kristiania.no") %>(<%= t('Exams')%>)</li>
             <li><%= mail_to("faktura@kristiania.no") %>(Faktura)</li>
             <li><a href="https://kristiania.no/ansatte">Ansatte</a></li>
           </ul>
