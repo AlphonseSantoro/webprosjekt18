@@ -29,38 +29,38 @@ en:
       Restaurants: "Restaurants"
       FastFood: "Fast Food"
       Auditorium: "Campus Kvadraturen has auditoriums in several of the school's buildings. You'll find them in Kirkegata 24 - 26 and Prinsens gate 7 - 9."
-      Canteen: "Canteen"
+      Canteen: "Cafeteria"
       CanteenInfo: "Campus Kvadraturen has its own canteen for students, located in the same building as the student bar in Kirkegata 22 - 24."
       StudentBar: "The student pub, Hvelvet, has its premises in Oslo's oldest bank vault, its entrance is in Kirkegata 22 - 24. Hvelvet is open every Thursday from 18.00 - 03.00."
   vulkan:
-    cafeteria: "cafeteria"
-    library: "library"
-    auditorium: "auditorium"
-    fastfood: "fastfood"
-    dining: "resturants"
-    grocery: "grovery store"
-    employee: "employee"
-    localarea: "local area"
+    cafeteria: "Cafeteria"
+    library: "Library"
+    auditorium: "Auditorium"
+    fastfood: "Fast Food"
+    dining: "Resturants"
+    grocery: "Grocery Store"
+    employee: "Employees"
+    localarea: "Surroundings"
     info-banner: "Here you will find campus with a department with Movie, TV and game. Campus is located nearby Grunerløkka with many acitvites can be inspirited to school projects. "
     weekdays: "Mon-Fri"
     weekend: "Sat-Sun"
-    loc-audi: "Located ground floor -1 (VU06)"
-    loc-cafe: "Located inner side at floor 1."
-    loc-lib: "Located at first floor nearby entrance."
-    address: "address"
+    loc-audi: "Located in the basement(VU06)"
+    loc-cafe: "Located at the far end of the ground floor."
+    loc-lib: "Located at the ground floor by the elevators."
+    address: "Address"
   fjerdingen:
-    weekdays: Mon-fri
-    weekends: Sat-sun
+    weekdays: Mon-Fri
+    weekends: Sat-Sun
     telephone: Tel
     employees: Employees
     address: Address
     norway: Norway
     surroundings: Surroundings
-    stores: Grocery stores
+    stores: Grocery Stores
     restaurants: Restaurants
-    fastfood: Fast food
+    fastfood: Fast Food
     auddesc: Ground floor, by the entrence(F101)
-    cantine: Cantina
-    bar: Student bar
+    cantine: Cafeteria
+    bar: Student Bar
     thursday: Thursday
     friday: Friday
