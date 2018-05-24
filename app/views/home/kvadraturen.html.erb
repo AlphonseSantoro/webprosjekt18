@@ -13,31 +13,31 @@
   <div class="row pb-md-3 pb-lg-3">
     <div class="col-md-4 col-lg-4 col-12">
       <h2><%= t('opening_hours').capitalize %></h2>
-      <p>Man–fre: 07.30 – 23.00<br>
-        Lør–søn: 09.00 – 17.00<br>
-        Tlf. 225 96 000<p>
+      <p><%= t('Kvadraturen.weekdays')%>: 07.30 – 23.00<br>
+        <%= t('Kvadraturen.weekend')%>: 09.00 – 17.00<br>
+        <%= t('Kvadraturen.telephone')%>. 225 96 000<p>
       </p>
     </div>
 
     <div class="col-md-4 col-lg-4 col-12">
-      <h2>Ansatte</h2>
+      <h2><%= t('Kvadraturen.employees')%></h2>
       <p class="pt-2">
-        Man–fre: 08.00 – 16.00</p>
+        <%= t('Kvadraturen.weekdays')%>: 08.00 – 16.00</p>
     </div>
 
     <div class="col-md-4 col-lg-4 col-12">
-      <h2>Adresse</h2>
-      <p>Kirkegata 24-26<br>0153 Oslo<br>Norge</p>
+      <h2><%= t('Kvadraturen.Address')%></h2>
+      <p>Kirkegata 24-26<br>0153 Oslo<br><%= t('Kvadraturen.Norway')%></p>
     </div>
   </div>
   <!-- NÆR INFORMASJON -->
   <div class="row">
     <div class="col-md-4 col-lg-4 card col-12 background_red mr-md-5 mr-lg-5 text-light p-0">
       <div class="card card-header">
-        <h2><u>Nærområdet:</u></h2>
+        <h2><u><%= t('Kvadraturen.Area')%>:</u></h2>
       </div>
       <div class="card card-body background_red">
-        <div>Matbutikker</div>
+        <div><%= t('Kvadraturen.Groceries')%></div>
         <ul>
           <li>Matkroken (Steen &amp; Strøm)</li>
           <li>Coop Prix (Oslo S)</li>
@@ -46,14 +46,14 @@
         </ul>
       </div>
       <div class="card card-body background_red">
-        <div >Spisesteder</div>
+        <div><%= t('Kvadraturen.Restuarants')%></div>
         <ul>
           <li>Steen &amp; Strøm</li>
           <li>Østbanehallen</li>
         </ul>
       </div>
       <div class="card card-body background_red">
-        <div>Hurtigmat</div>
+        <div><%= t('Kvadraturen.FastFood')%></div>
         <ul>
           <li>Burger King</li>
           <li>Peppes Pizza</li>
@@ -70,17 +70,17 @@
   <div class="row pt-5 pb-3">
     <div class="col-md-4 col-lg-4 col-12">
       <h1>Auditorium</h1>
-      <p>Campus Kvadraturen har auditorium i flere av skolens bygg. Du finner auditorium i Kirkegata 24 - 26 og Prinsens gate 7 - 9.</p>
+      <p><%= t('Kvadraturen.Auditorium')%></p>
     </div>
 
     <div class="col-md-4 col-lg-4 col-12">
-      <h1>Kantine</h1>
-      <p>Campus Kvadraturen har egen kantine for studenter. Ligger i samme bygg som Campus Kvadraturens studentbar.</p>
+      <h1><%= t('Kvadraturen.Canteen')%></h1>
+      <p><%=t('Kvadraturen.CanteenInfo')%></p>
     </div>
 
     <div class="col-md-4 col-lg-4 col-12">
-      <h1>Studentbar</h1>
-      <p>Studentbaren Hvelvet har lokaler i Oslo's eldste bankhvelv og har inngang i Kirkegate 22 - 24. Hvelvet har åpent hver torsdag fra 18.00 - 03.00.</p>
+      <h1>Student bar</h1>
+      <p><%= t('Kvadraturen.StudentBar')%></p>
     </div>
   </div>
 </div>
