@@ -17,3 +17,5 @@ en:
     arrival_stop: "arrival stop"
     departure_stop: "departure stop"
     current_address: "my location"
+  vulkan:
+    rails db:migrate
