@@ -1,88 +1,96 @@
 <!-- BANNER -->
-<div id="banner">
-  <!-- BILDE HER -->
-  <%= image_tag 'campus_kvadraturen_banner.jpg', id: 'campus_banner' %>
+<%= image_tag 'campus_kvadraturen_banner.jpg', id: 'campus_banner' %>
+<div id="mainBanner" style="padding-top: 200px;">
   <!-- BANNER TEKST HER-->
-  <div class="col-md-6 col-lg-6 pl-md-5 pl-lg-5 pl-3 text-light" id="banner_text">
+  <div class="col-md-6 col-lg-6 pl-md-5 pl-lg-5 pl-3 text-light mb-5 pb-5" id="banner_text">
     <h1 id="klasse_tittel">Campus</h1>
     <h2 id="campus_tittel">Kvadraturen</h2>
   </div>
 </div>
-<div class="container-fluid pl-5 pr-5 pt-5 position-relative background_grey">
+<div class="container-fluid no-gutters position-relative">
   <!-- GENERELL INFO -->
-  <div class="row pb-md-3 pb-lg-3">
-    <div class="col-md-4 col-lg-4 col-12">
-      <h2><%= t('opening_hours').capitalize %></h2>
-      <p><%= t('Kvadraturen.weekdays')%>: 07.30 – 23.00<br>
-        <%= t('Kvadraturen.weekend')%>: 09.00 – 17.00<br>
-        <%= t('Kvadraturen.telephone')%>. 225 96 000<p>
+  <div class="card card-body background_grey mt-5">
+    <div class="row pb-md-3 pb-lg-3">
+      <div class="col-md-4 col-lg-4 col-12">
+        <h2><%= t('opening_hours').capitalize %></h2>
+        <p><%= t('Kvadraturen.weekdays')%>: 07.30 – 23.00<br>
+          <%= t('Kvadraturen.weekend')%>: 09.00 – 17.00<br>
+          <%= t('Kvadraturen.telephone')%>. 225 96 000<p>
       </p>
-    </div>
+      </div>
 
-    <div class="col-md-4 col-lg-4 col-12">
-      <h2><%= t('Kvadraturen.employees')%></h2>
-      <p class="pt-2">
-        <%= t('Kvadraturen.weekdays')%>: 08.00 – 16.00</p>
-    </div>
+      <div class="col-md-4 col-lg-4 col-12">
+        <h2><%= t('Kvadraturen.employees')%></h2>
+        <p class="pt-2">
+          <%= t('Kvadraturen.weekdays')%>: 08.00 – 16.00</p>
+      </div>
 
-    <div class="col-md-4 col-lg-4 col-12">
-      <h2><%= t('Kvadraturen.Address')%></h2>
-      <p>Kirkegata 24-26<br>0153 Oslo</p>
+      <div class="col-md-4 col-lg-4 col-12">
+        <h2><%= t('Kvadraturen.Address')%></h2>
+        <p>Kirkegata 24-26<br>0153 Oslo</p>
+      </div>
     </div>
   </div>
+
   <!-- NÆR INFORMASJON -->
-  <div class="row">
-    <div class="col-md-4 col-lg-4 card col-12 background_blue mr-md-5 mr-lg-5 text-light p-0">
-      <div class="card card-header">
-        <h2><u><%= t('Kvadraturen.Area')%>:</u></h2>
+  <div class="card card-body background_grey mt-5 mb-5">
+    <div class="row">
+      <div class="col-md-4 col-lg-4 card col-12 background_blue mr-md-5 mr-lg-5 text-light p-0">
+        <div class="card card-header">
+          <h2><u><%= t('Kvadraturen.Area')%>:</u></h2>
+        </div>
+        <div class="card card-body background_blue">
+          <div><%= t('Kvadraturen.Groceries')%></div>
+          <ul>
+            <li>Matkroken (Steen &amp; Strøm)</li>
+            <li>Coop Prix (Oslo S)</li>
+            <li>Joker (Oslo S)</li>
+            <li>Kiwi (Byporten)</li>
+          </ul>
+        </div>
+        <div class="card card-body background_blue">
+          <div><%= t('Kvadraturen.Restuarants')%></div>
+          <ul>
+            <li>Steen &amp; Strøm</li>
+            <li>Østbanehallen</li>
+          </ul>
+        </div>
+        <div class="card card-body background_blue">
+          <div><%= t('Kvadraturen.FastFood')%></div>
+          <ul>
+            <li>Burger King</li>
+            <li>Peppes Pizza</li>
+            <li>Subway</li>
+          </ul>
+        </div>
       </div>
-      <div class="card card-body background_blue">
-        <div><%= t('Kvadraturen.Groceries')%></div>
-        <ul>
-          <li>Matkroken (Steen &amp; Strøm)</li>
-          <li>Coop Prix (Oslo S)</li>
-          <li>Joker (Oslo S)</li>
-          <li>Kiwi (Byporten)</li>
-        </ul>
+      <!-- KART -->
+      <div class="col-md-6 col-lg-6 col-12 ml-md-5 ml-lg-5 card background_blue mt-3 mt-md-0">
+        <%= render 'home/campus_map' %>
       </div>
-      <div class="card card-body background_blue">
-        <div><%= t('Kvadraturen.Restuarants')%></div>
-        <ul>
-          <li>Steen &amp; Strøm</li>
-          <li>Østbanehallen</li>
-        </ul>
-      </div>
-      <div class="card card-body background_blue">
-        <div><%= t('Kvadraturen.FastFood')%></div>
-        <ul>
-          <li>Burger King</li>
-          <li>Peppes Pizza</li>
-          <li>Subway</li>
-        </ul>
-      </div>
-    </div>
-    <!-- KART -->
-    <div class="col-md-6 col-lg-6 col-12 ml-md-5 ml-lg-5 card background_blue">
-      <%= render 'home/campus_map' %>
     </div>
   </div>
+
   <!-- PRAKTISK INFO -->
-  <div class="row pt-5 pb-3">
-    <div class="col-md-4 col-lg-4 col-12">
-      <h1>Auditorium</h1>
-      <p><%= t('Kvadraturen.Auditorium')%></p>
-    </div>
+  <div class="card card-body background_grey mb-5">
+    <div class="row pt-5 pb-3">
+      <div class="col-md-4 col-lg-4 col-12">
+        <h1>Auditorium</h1>
+        <p><%= t('Kvadraturen.Auditorium')%></p>
+      </div>
 
-    <div class="col-md-4 col-lg-4 col-12">
-      <h1><%= t('Kvadraturen.Canteen')%></h1>
-      <p><%=t('Kvadraturen.CanteenInfo')%></p>
-    </div>
+      <div class="col-md-4 col-lg-4 col-12">
+        <h1><%= t('Kvadraturen.Canteen')%></h1>
+        <p><%=t('Kvadraturen.CanteenInfo')%></p>
+      </div>
 
-    <div class="col-md-4 col-lg-4 col-12">
-      <h1>Student bar</h1>
-      <p><%= t('Kvadraturen.StudentBar')%></p>
+      <div class="col-md-4 col-lg-4 col-12">
+        <h1>Student bar</h1>
+        <p><%= t('Kvadraturen.StudentBar')%></p>
+      </div>
     </div>
   </div>
+
 </div>
 </div> <!-- END BODY DIV -->
 

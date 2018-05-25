@@ -1,84 +1,89 @@
 <!-- BANNER -->
-<div id="banner">
-  <!-- BILDE HER -->
-  <%= image_tag 'campus_fjerdingen.jpg', id: 'campus_banner' %>
+<%= image_tag 'campus_fjerdingen.jpg', id: 'campus_banner' %>
+<div id="banner" style="padding-top: 200px;">
   <!-- BANNER TEKST HER-->
-  <div class="col-md-6 col-lg-6 pl-md-5 pl-lg-5 pl-3 text-light" id="banner_text">
+  <div class="col-md-6 col-lg-6 pl-md-5 pl-lg-5 pl-3 text-light pb-5" id="banner_text">
     <h1 id="klasse_tittel">Campus</h1>
     <h2 id="campus_tittel">Fjerdingen</h2>
   </div>
 </div>
-<div class="container-fluid pl-5 pr-5 pt-5 position-relative background-daisy">
+<div class="container-fluid no-gutters pt-5 position-relative">
   <!-- GENERELL INFO -->
-  <div class="row pb-md-3 pb-lg-3">
-    <div class="col-md-4 col-lg-4 col-12">
-      <h2><%= t('opening_hours').capitalize %></h2>
-      <p><%= t('fjerdingen.weekdays')%>: 08.00 – 24.00<br>
-         <%= t('fjerdingen.weekends')%>: 10.00 – 23.00<br>
-        <%= t('fjerdingen.telephone')%>: 22 59 60 00</p>
-    </div>
+  <div class="card card-body background_grey mt-5">
+    <div class="row pb-md-3 pb-lg-3">
+      <div class="col-md-4 col-lg-4 col-12">
+        <h2><%= t('opening_hours').capitalize %></h2>
+        <p><%= t('fjerdingen.weekdays')%>: 08.00 – 24.00<br>
+          <%= t('fjerdingen.weekends')%>: 10.00 – 23.00<br>
+          <%= t('fjerdingen.telephone')%>: 22 59 60 00</p>
+      </div>
 
-    <div class="col-md-4 col-lg-4 col-12">
-      <h2><%= t('fjerdingen.employees')%></h2>
-      <p class="pt-2">
-        <%= t('fjerdingen.weekdays')%>: 08.00 – 16.00</p>
-    </div>
+      <div class="col-md-4 col-lg-4 col-12">
+        <h2><%= t('fjerdingen.employees')%></h2>
+        <p class="pt-2">
+          <%= t('fjerdingen.weekdays')%>: 08.00 – 16.00</p>
+      </div>
 
-    <div class="col-md-4 col-lg-4 col-12">
-      <h2><%= t('fjerdingen.address')%></h2>
-      <p>Chr. Krohgs gate 32<br>0186 Oslo</p>
+      <div class="col-md-4 col-lg-4 col-12">
+        <h2><%= t('fjerdingen.address')%></h2>
+        <p>Chr. Krohgs gate 32<br>0186 Oslo</p>
+      </div>
     </div>
   </div>
   <!-- NÆR INFORMASJON -->
-  <div class="row">
-    <div class="col-md-4 col-lg-4 card col-12 background_blue mr-md-5 mr-lg-5 text-light p-0">
-      <div class="card card-header">
-        <h2><u><%= t('fjerdingen.surroundings')%>:</u></h2>
+  <div class="card card-body background_grey mt-5">
+    <div class="row">
+      <div class="col-md-4 col-lg-4 card col-12 background_blue mr-md-5 mr-lg-5 text-light p-0">
+        <div class="card card-header">
+          <h2><u><%= t('fjerdingen.surroundings')%>:</u></h2>
+        </div>
+        <div class="card card-body background_blue">
+          <div><%= t('fjerdingen.stores')%></div>
+          <ul>
+            <li>Food Express</li>
+            <li>Coop Prix (Hausmannsgate)</li>
+            <li>Rema 1000 Storgata</li>
+          </ul>
+        </div>
+        <div class="card card-body background_blue">
+          <div><%= t('fjerdingen.restaurants')%></div>
+          <ul>
+            <li>Südøst</li>
+            <li>Freddy Fuego Hausmannsgate</li>
+          </ul>
+        </div>
+        <div class="card card-body background_blue">
+          <div><%= t('fjerdingen.fastfood')%></div>
+          <ul>
+            <li>Burger King Torggata</li>
+            <li>Dominos - Schousplass</li>
+          </ul>
+        </div>
       </div>
-      <div class="card card-body background_blue">
-        <div><%= t('fjerdingen.stores')%></div>
-        <ul>
-          <li>Food Express</li>
-          <li>Coop Prix (Hausmannsgate)</li>
-          <li>Rema 1000 Storgata</li>
-        </ul>
+      <!-- KART -->
+      <div class="col-md-6 col-lg-6 col-12 ml-md-5 ml-lg-5 card background_blue mt-3 mt-md-0">
+        <%= render 'home/campus_map' %>
       </div>
-      <div class="card card-body background_blue">
-        <div><%= t('fjerdingen.restaurants')%></div>
-        <ul>
-          <li>Südøst</li>
-          <li>Freddy Fuego Hausmannsgate</li>
-        </ul>
-      </div>
-      <div class="card card-body background_blue">
-        <div><%= t('fjerdingen.fastfood')%></div>
-        <ul>
-          <li>Burger King Torggata</li>
-          <li>Dominos - Schousplass</li>
-        </ul>
-      </div>
-    </div>
-    <!-- KART -->
-    <div class="col-md-6 col-lg-6 col-12 ml-md-5 ml-lg-5 card background_blue">
-      <%= render 'home/campus_map' %>
     </div>
   </div>
   <!-- PRAKTISK INFO -->
-  <div class="row pt-5 pb-3">
-    <div class="col-md-4 col-lg-4 col-12">
-      <h1>Auditorium</h1>
-      <p><%= t('fjerdingen.auddesc')%></p>
-    </div>
+  <div class="card card-body background_grey mt-5 mb-5">
+    <div class="row pt-5 pb-3">
+      <div class="col-md-4 col-lg-4 col-12">
+        <h1>Auditorium</h1>
+        <p><%= t('fjerdingen.auddesc')%></p>
+      </div>
 
-    <div class="col-md-4 col-lg-4 col-12">
-      <h1><%= t('fjerdingen.cantine')%></h1>
-      <p>10:00-15:00</p>
-    </div>
+      <div class="col-md-4 col-lg-4 col-12">
+        <h1><%= t('fjerdingen.cantine')%></h1>
+        <p>10:00-15:00</p>
+      </div>
 
-    <div class="col-md-4 col-lg-4 col-12">
-      <h1><%= t('fjerdingen.bar')%></h1>
-      <p><%= t('fjerdingen.thursday')%>: 05:00-12:00</p>
-      <p><%= t('fjerdingen.friday')%>: 03:00-12:00</p>
+      <div class="col-md-4 col-lg-4 col-12">
+        <h1><%= t('fjerdingen.bar')%></h1>
+        <p><%= t('fjerdingen.thursday')%>: 05:00-12:00</p>
+        <p><%= t('fjerdingen.friday')%>: 03:00-12:00</p>
+      </div>
     </div>
   </div>
 </div> <!-- END BODY DIV -->
