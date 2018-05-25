@@ -12,7 +12,6 @@ class HomeController < ApplicationController
       params[:from] = 'Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo'
       params[:to] = 'Kirkegata+24,+Oslo'
     end
-    @maps = ::GoogleMaps.new(params)
     @directions = Directions.new(params, session[:locale])
     @from = Location.all_except(params[:to])
     @to = Location.all_except(params[:from])

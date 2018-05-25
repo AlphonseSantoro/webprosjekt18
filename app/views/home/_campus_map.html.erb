@@ -1,8 +1,20 @@
 <div class="row">
-  <div class="btn p-4 text-light border-dark outline-gold-hover col-3" onclick="city_bikes(<%= @bikes[:center][1] %>,<%= @bikes[:center][0] %>,<%= @bikes[:body].to_json %>,'<%= t('available_bikes').capitalize %>', '<%= "Campus #{@campus}" %>');">By-sykkel</div>
-  <div class="btn p-4 text-light border-dark outline-gold-hover col-3" onclick="places(<%= @bikes[:center][1] %>, <%= @bikes[:center][0] %>, '<%= "Campus #{@campus}" %>');">Cafe</div>
-  <div class="btn p-4 text-light border-dark outline-gold-hover col-3" onclick="campus()">Campus</div>
-  <div class="btn p-4 text-light border-dark outline-gold-hover col-3" onclick="campus()">Veiviser</div>
+  <div class="btn p-4 text-light border-dark outline-gold-hover col-3"
+       onclick="city_bikes(<%= @bikes[:center][1] %>,<%= @bikes[:center][0] %>,<%= @bikes[:body].to_json %>,'<%= t('available_bikes').capitalize %>','<%= "Campus #{@campus}" %>');">
+    <i class="fas fa-bicycle fa-2x"></i> <p class="p-2">By-sykkel</p>
+  </div>
+  <div class="btn p-4 text-light border-dark outline-gold-hover col-3"
+       onclick="places(<%= @bikes[:center][1] %>, <%= @bikes[:center][0] %>, '<%= "Campus #{@campus}" %>');">
+    <i class="fas fa-coffee fa-2x"></i><p class="p-2">Cafe</p>
+  </div>
+  <div class="btn p-4 text-light border-dark outline-gold-hover col-3"
+       onclick="campus()">
+    <i class="fas fa-university fa-2x"></i><p>Campus</p>
+  </div>
+  <a class="btn p-4 text-light border-dark outline-gold-hover col-3"
+       href="/logistics">
+    <i class="fas fa-map-signs fa-2x"></i><p class="p-2">Veiviser</p>
+  </a>
 </div>
 <div class="row" style="height: 100%">
   <div id="map" class="col-12"></div>
