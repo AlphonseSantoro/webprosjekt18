@@ -15,11 +15,17 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+$theme-colors: (
+"primary": #ffffff,
+"danger": #fefefe
+);
+
 
 @media (min-width: 756px) {
   body {
     padding-top: 56px;
     padding-bottom: 200px;
+    background-color: #f4f4f4;
   }
   #logo_small {
     display: none;
@@ -32,6 +38,7 @@
 @media (max-width: 756px) {
   body {
     padding-top: 56px;
+    background-color: #f4f4f4;
   }
   #logo_small {
     display: block;
@@ -54,7 +61,7 @@
 
 #logo {
   padding-right: 10px;
-  color: black;
+  color: white;
 }
 
 svg {
@@ -97,22 +104,38 @@ html, body {
   padding: 15px;
 }
 
-.background-gold {
-  background-color: #CDA34F;
-}
-
 .background-daisy {
-  background-color: #E9e7da;
-}
-
-.background_red {
-  background-color: #984843;
-}
-
-.border-red {
-  border: 1px solid #984843;
+  background-color: #f4f4f4;
 }
 
 .border-bunn {
   border-bottom: 1px solid #f0f0f0;
+}
+
+.border-bunnGrey {
+  border-bottom: 1px solid #c1c1c1;
+}
+
+.background_grey {
+  background-color: #f4f4f4;
+}
+
+.background_darkBlue {
+  background-color: #123f59;
+}
+
+.background_blue {
+  background-color: #4f5f82;
+}
+
+.background_lightGrey {
+  background-color: #fcfcfc;
+}
+
+.background_travelGrey {
+  background-color: #eff1f7;
+}
+
+.background_travelGreyTop {
+  background-color: #e3e5ed;
 }

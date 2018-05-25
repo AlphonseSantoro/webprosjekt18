@@ -16,3 +16,8 @@
 //= require popper
 //= require bootstrap
 //= require_tree .
+
+function displayForm(enable, disable) {
+    document.getElementById(enable).style.display = 'block';
+    document.getElementById(disable).style.display = 'none';
+}
