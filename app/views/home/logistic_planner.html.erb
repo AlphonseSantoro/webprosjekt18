@@ -2,44 +2,46 @@
   <div class="card-body">
     <div id="parent-travel" class="mb-2">
       <div class="row">
-        <div class="btn-group btn-group-toggle col-12 col-md-6 col-lg-6 pl-md-0 pr-lg-0" data-toggle="buttons">
-          <label class="btn btn-primary background_blue rounded focus active m-2 pt-3" onclick="displayForm('travel', 'travel2')">
-            <input type="radio" name="options" id="option1" autocomplete="off" checked> <%= "#{t('logistics.travel').capitalize}#{t('between')}campus" %>
-          </label>
-          <label class="btn btn-primary background_blue rounded m-2 pt-3" onclick="displayForm('travel2', 'travel')">
-            <input type="radio" name="options" id="option2" autocomplete="off"> <%= "#{t('logistics.travel').capitalize} #{t('from')} #{t('logistics.my_location')}" %>
-          </label>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6">
-          <div class="row">
-            <div id="travel" class="col-12 col-md-12 col-lg-12 collapse <%= params[:position].nil? ? 'show' : '' %>" data-parent="#parent-travel">
-              <%= form_tag '/logistics', method: :get, class: 'pl-5 pt-lg-4' do %>
-                <div class="row">
-                  <div class="col-12 col-md-12 col-lg-5">
-                    <%= label_tag t('from'), nil, class: 'text-dark text-size-large' %>
-                    <%= select_tag 'from', options_for_select(@from.collect {|b| [b[:name], b[:address]]}, value: params[:from], class: 'text-size-large'),
-                                   class: 'btn select-button background_lightGrey outline-grey p-4 select-text-size',
-                                   onChange: 'this.form.submit();' %>
-                  </div>
-                  <div class="col-12 col-md-12 col-lg-5">
-                    <%= label_tag t('to'), nil, class: 'text-dark text-size-large' %>
-                    <%= select_tag 'to', options_for_select(@to.collect {|b| [b[:name], b[:address]]}, params[:to]),
-                                   class: 'btn select-button background_lightGrey outline-grey p-4 select-text-size',
-                                   onChange: 'this.form.submit();' %>
-                  </div>
-                </div>
-              <% end %>
+        <div class="col-12 col-md-12 col-lg-6 pl-md-0 pr-lg-0 pl-2 pr-2">
+          <div class="row" data-toggle="buttons">
+            <div class="col-12 col-md-6 col-lg-6 btn-group btn-group-toggle">
+              <label class="btn btn-primary background_blue rounded focus active m-2 pt-3 p-4" style="width: 100%" onclick="displayForm('travel', 'travel2')">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> <%= "#{t('logistics.travel').capitalize} #{t('between')} campus" %>
+              </label>
             </div>
-            <div id="travel2" class="col-12 col-md-12 col-lg-12 collapse <%= params[:position].nil? ? '' : 'show' %>" data-parent="#parent-travel">
-              <%= form_tag '/logistics', method: :get, class: 'pl-5 pt-lg-4' do %>
-                <%= hidden_field_tag 'location', params[:location] %>
-                <%= label_tag "#{t('logistics.travel')} #{t('to')}", nil, class: 'text-dark text-size-large' %>
-                <%= select_tag 'position', options_for_select(@all.collect {|b| [b[:name], b[:address]]}, params[:position]),
-                               class: 'btn select-button background_lightGrey outline-grey p-4 text-size-large',
-                               onChange: 'locateUser("location"); this.form.submit();' %>
-              <% end %>
+            <div class="col-12 col-md-6 col-lg-6 btn-group btn-group-toggle">
+              <label class="btn btn-primary background_blue rounded m-2 pt-3 p-4" style="width: 100%" onclick="displayForm('travel2', 'travel')">
+                <input type="radio" name="options" id="option2" autocomplete="off"> <%= "#{t('logistics.travel').capitalize} #{t('from')} #{t('logistics.my_location')}" %>
+              </label>
             </div>
           </div>
+        </div>
+        <div id="travel" class="col-12 col-md-12 col-lg-6 <%= params[:position].nil? ? 'show' : '' %>">
+          <%= form_tag '/logistics', method: :get do %>
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-6 pr-md-3 pl-md-3 pl-4 pr-4">
+                <%= label_tag t('from'), nil, class: 'text-dark text-size-large' %>
+                <%= select_tag 'from', options_for_select(@from.collect {|b| [b[:name], b[:address]]}, params[:from]),
+                               class: 'btn select-button background_lightGrey outline-grey p-4 select-text-size',
+                               onChange: 'this.form.submit();', style: 'width: 75%' %>
+              </div>
+              <div class="col-12 col-md-6 col-lg-6 pr-md-3 pl-md-3 pl-4 pr-4">
+                <%= label_tag t('to'), nil, class: 'text-dark text-size-large' %>
+                <%= select_tag 'to', options_for_select(@to.collect {|b| [b[:name], b[:address]]}, {class: 'select-text-size', value: params[:to]}),
+                               class: 'btn select-button background_lightGrey outline-grey p-4',
+                               onChange: 'this.form.submit();', style: 'width: 75%' %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <div id="travel2" class="col-12 col-md-12 col-lg-12 collapse <%= params[:position].nil? ? '' : 'show' %>">
+          <%= form_tag '/logistics', method: :get, class: 'pl-5 pt-lg-4' do %>
+            <%= hidden_field_tag 'location', params[:location] %>
+            <%= label_tag "#{t('logistics.travel')} #{t('to')}", nil, class: 'text-dark text-size-large' %>
+            <%= select_tag 'position', options_for_select(@all.collect {|b| [b[:name], b[:address]]}, params[:position]),
+                           class: 'btn select-button background_lightGrey outline-grey p-4 text-size-large',
+                           onChange: 'locateUser("location"); this.form.submit();' %>
+          <% end %>
         </div>
       </div>
     </div>
