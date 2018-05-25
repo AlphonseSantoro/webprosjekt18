@@ -63,68 +63,6 @@
   font-weight: bolder;
 }
 
-#info_banner {
-  z-index: 100;
-  position: absolute;
-  color: white;
-  opacity: 0.7;
-  top: 4.7rem;
-  font-size: 0.8rem;
-  font-family: Helvetica;
-  font-style: italic;
-}
-
-#body_div {
-  position: relative;
-}
-
-#info_tittel {
-  top: 15%;
-  position: relative;
-}
-
-.tittel-info {
-  top: 19%;
-  position: relative;
-  font-size: 1.6rem;
-  margin-bottom: 1.6rem;
-}
-
-#info_div {
-  border-right: 1px solid #ccc;
-}
-
-#farge-div {
-  background-color: #984843;
-  height: 550px;
-  //margin-top: 3rem;
-}
-
-#store-info-tittel {
-  padding-top: 1.9rem;
-  border-bottom: 1.4px solid white;
-  position: relative;
-  color: white;
-}
-
-.farge-tittel {
-  color: white;
-  padding-top: 1rem;
-}
-
-#map-div {
-  margin-top: 3rem;
-  width: 100%;
-  height: 85%;
-  overflow: hidden;
-  background-color: #0c5460;
-}
-
-#map_placeholder {
-  position: relative;
-  top: -4rem;
-}
-
 li {
   color: white;
   opacity: 0.9;
@@ -152,13 +90,26 @@ li {
 }
 
 #from-to {
-  border-top: black 1px dashed;
-  border-bottom: black 1px solid;
+  //border-top: black 1px dashed;
+  //border-bottom: black 1px solid;
+  color: #232323;
 }
 
+#from-to:hover {
+  color: #fefefe;
+}
+
+#from-to:target {
+  background-color: black !important;
+}
 #travel_campus {
-  border-bottom: black 1px dashed;
-  border-top: black 1px solid;
+  //border-bottom: black 1px dashed;
+  //border-top: black 1px solid;
+  color: #232323;
+}
+
+#travel_campus:hover {
+  color: #fefefe;
 }
 
 #route-card:hover {
@@ -172,7 +123,7 @@ li {
 }
 
 .outline-gold-hover:hover {
-  background-color: #CDA34F;
+  background-color: #5a6887;
 }
 
 .border-red {
@@ -185,4 +136,16 @@ li {
 
 .select-text-size {
   font-size: 1.1rem !important;
+}
+
+.travel_route {
+  color: #232323;
+}
+
+.travel_route:hover {
+  color: #fefefe;
+}
+
+.outline-grey:hover {
+  background-color: #eaeaea;
 }

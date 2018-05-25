@@ -32,7 +32,7 @@ nb:
     services: "tilbud"
     counsellor: "Rådgiver"
     health: "Lege"
-    dentist: "Tanlege"
+    dentist: "Tannlege"
     week_offers: "Ukas' Mat tilbud"
     info: "Mer informasjon på"
     operator: "Felles sentralbord for all campus"
@@ -59,7 +59,7 @@ nb:
     StudentBar: "Studentbaren Hvelvet har lokaler i Oslos eldste bankhvelv og har inngang i Kirkegata 22 - 24. Hvelvet har åpent hver torsdag fra 18.00 - 03.00."
   vulkan:
     cafeteria: "Kantine"
-    library: "Bibloteket"
+    library: "Biblioteket"
     auditorium: "Auditorium"
     fastfood: "Hurtigmat"
     dining: "Spisesteder"
