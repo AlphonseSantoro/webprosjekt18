@@ -7,10 +7,9 @@
     <p><%= t('main.header_text')%></p>
   </div>
 </div>
-<div class="container-fluid pl-0 pr-0 position-relative">
-
-<div class="row mt-5" style="margin-top: 50px;">
-  <div class="row text-light m-4">
+<div class="container-fluid no-gutters position-relative">
+<div class="card background-daisy mt-5 mb-5">
+  <div class="row text-dark m-4">
     <div class="col-md-4 col-lg-4 ">
       <h5>Fjerdingen:</h5>
       <%= link_to image_tag('campus_fjerdingen.jpg', class: "rounded img-responsive", id: "campus"), '/fjerdingen' %>
@@ -22,67 +21,79 @@
     <div class="col-md-4 col-lg-4">
       <h5>Vulkan & Brenneriveien</h5>
       <%= link_to image_tag('campus_vulkan.jpg', class: "rounded img-responsive", id: "campus"), '/vulkan' %>
-
     </div>
   </div>
 </div>
-  <div class="background_grey">
+  <div class="card background-daisy">
     <!-- Info felles for campusene -->
-    <div class="row pl-md-5 pl-lg-5 pl-md-3 pl-lg-3 pl-0 pt-5 pb-5 m-0" style="margin-top: 50px;">
-      <div class="col-md-8 pl-5 pr-5">
-        <h4><%= t('main.contact_info')%>:</h4>
-        <p><%= t('main.operator') %> (kl. 08.00-15.30):<br>
-          <%= t('main.phone')%>: 22 05 75 50<br><br>
-          <%= t('main.opening_hours')%> <%= t('main.reception')%>:<br>
-          <%= t('monday')%> - <%= t('friday')%>: 08.00-16.00<br><br>
-          Campus' <%= t('main.opening_hours')%>:<br>
-          <%= t('monday')%> - <%= t('friday')%>: 16.00-00.00</p>
+    <div class="container pl-md-5 pr-md-5 pl-lg-5 pr-lg-5 pl-0 pr-0 pl-md-0 pl-md-0">
+      <div class="row p-3 p-md-5 p-lg-5">
+        <div class="col-md-6 col-12">
+          <h4><%= t('main.contact_info')%>:</h4>
+          <p><%= t('main.operator') %> (kl. 08.00-15.30):<br>
+            <%= t('main.phone')%>: 22 05 75 50<br><br>
+            <%= t('main.opening_hours')%> <%= t('main.reception')%>:<br>
+            <%= t('monday')%> - <%= t('friday')%>: 08.00-16.00<br><br>
+            Campus' <%= t('main.opening_hours')%>:<br>
+            <%= t('monday')%> - <%= t('friday')%>: 16.00-00.00</p>
+        </div>
+        <div class="col-md-6 col-12" >
+          <div class="card card-body background-blue" style="height: 100%">
+            <div class="row p-1 p-md-3 p-lg-5 align-items-center">
+              <i class="fas fa-map-signs fa-4x"></i><p class="pl-4 mb-0 text-full-height">Veiviser</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- Student Tilbud -->
-    <div class="row">
-      <div class="col-md-3 col-lg-3 ml-lg-4 mr-lg-4 ml-md-2 mr-md-2 card card-body col-12 text-light p-0">
-        <div class="card card-body pl-md-5 pl-lg-5 pl-3 background_blue">
-          <div><u><%= t('main.mail_list') %>:</u></div>
-          <ul>
-            <li><%= mail_to("student@kristiania.no", nil, class: 'text-light') %>(<%= t('main.active_students')%>)</li>
-            <li><%= mail_to("eksamen@kristiania.no", nil, class: 'text-light') %>(<%= t('main.exams')%>)</li>
-            <li><%= mail_to("faktura@kristiania.no", nil, class: 'text-light') %>(<%= t('main.invoice') %>)</li>
-            <li><a href="https://kristiania.no/ansatte" class="text-light"><%= t('main.employees')%></a></li>
-          </ul>
+    <div class="container">
+      <div class="row background-daisy">
+        <div class="col-12 col-md-4 col-lg-4 text-light">
+          <div class="card card-body background_blue" style="height: 100%">
+            <div><u><%= t('main.mail_list') %>:</u></div>
+            <ul>
+              <li><%= mail_to("student@kristiania.no", nil, class: 'text-light') %>(<%= t('main.active_students')%>)</li>
+              <li><%= mail_to("eksamen@kristiania.no", nil, class: 'text-light') %>(<%= t('main.exams')%>)</li>
+              <li><%= mail_to("faktura@kristiania.no", nil, class: 'text-light') %>(<%= t('main.invoice') %>)</li>
+              <li><a href="https://kristiania.no/ansatte" class="text-light"><%= t('main.employees')%></a></li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <!-- delt i to -->
-      <div class="col-md-3 col-lg-3 ml-lg-4 mr-lg-4 ml-md-2 mr-md-2 card card-body col-12 text-light p-0">
-        <div class="card card-body pl-md-5 pl-lg-5 pl-3 background_blue">
-          <div><u>SiO <%= t('main.services')%>:</u></div>
-          <ul>
-            <li><a href="https://www.sio.no/helse/radgivning" class="text-light"><%= t('main.counsellor')%></a></li>
-            <li><a href="https://www.sio.no/helse" class="text-light"> <%= t('main.health')%> </a></li>
-            <li><a href="https://www.sio.no/helse/tannlege" class="text-light"><%= t('main.dentist')%></a></li>
-          </ul>
+        <!-- delt i to -->
+        <div class="col-12 col-md-4 col-lg-4  text-light">
+          <div class="card card-body background_blue" style="height: 100%">
+            <div><u>SiO <%= t('main.services')%>:</u></div>
+            <ul>
+              <li><a href="https://www.sio.no/helse/radgivning" class="text-light"><%= t('main.counsellor')%></a></li>
+              <li><a href="https://www.sio.no/helse" class="text-light"> <%= t('main.health')%> </a></li>
+              <li><a href="https://www.sio.no/helse/tannlege" class="text-light"><%= t('main.dentist')%></a></li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="col-md-3 col-lg-3 ml-lg-4 mr-lg-4 ml-md-2 mr-md-2 card card-body col-12 text-light p-0">
-        <div class="card card-body pl-md-5 pl-lg-5 pl-3 background_blue">
-          <div><u><%= t('main.week_offers')%>:</u></div>
-          <ul>
-            <li><a href="https://www.rema.no/kampanjevarer" class="text-light">Rema 1000</a></li>
-            <li><a href="http://kundeavis.coop.no/aviser/prix/ost/?id=4306" class="text-light">Coop Prix</a></li>
-            <li>
-              <a href="http://kundeavisene.no/7-kiwi?gclid=Cj0KCQjw_ZrXBRDXARIsAA8KauT3efDxcWNqNg-UIFvUUzLIP_HqdN7sT9xuH-twHagFKb5CYH2OXo4aAnuYEALw_wcB" class="text-light">Kiwi</a>
-            </li>
-            <li><a href="https://meny.no/tilbud" class="text-light">Meny</a></li>
-          </ul>
+        <div class="col-12 col-md-4 col-lg-4 text-light">
+          <div class="card card-body background_blue" style="height: 100%">
+            <div><u><%= t('main.week_offers')%>:</u></div>
+            <ul>
+              <li><a href="https://www.rema.no/kampanjevarer" class="text-light">Rema 1000</a></li>
+              <li><a href="http://kundeavis.coop.no/aviser/prix/ost/?id=4306" class="text-light">Coop Prix</a></li>
+              <li>
+                <a href="http://kundeavisene.no/7-kiwi?gclid=Cj0KCQjw_ZrXBRDXARIsAA8KauT3efDxcWNqNg-UIFvUUzLIP_HqdN7sT9xuH-twHagFKb5CYH2OXo4aAnuYEALw_wcB" class="text-light">Kiwi</a>
+              </li>
+              <li><a href="https://meny.no/tilbud" class="text-light">Meny</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
     <!-- Extra info -->
-    <div class="row col-md-12 mt-5 col-lg-12 pl-md-5 pl-lg-5 pl-md-3 pl-lg-3 pl-0" style="margin-top: 50px;">
-      <div class="mb-5">
-        <h4><%= t('main.info')%>:</h4>
-        <a href="https://kristiania.no">Kristiana.no</a><br>
-        <a href="https://www.westerdals.no">Westerdals.no</a>
+    <div class="container pl-5 pr-5 pl-md-0 pr-md-0">
+      <div class="row">
+        <div class="m-5">
+          <h4><%= t('main.info')%>:</h4>
+          <a href="https://kristiania.no">Kristiana.no</a><br>
+          <a href="https://www.westerdals.no">Westerdals.no</a>
+        </div>
       </div>
     </div>
   </div>

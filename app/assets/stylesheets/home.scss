@@ -31,6 +31,9 @@
   #banner_text{
     top:65%;
   }
+  .text-full-height {
+    font-size: 5vw;
+  }
 }
 
 @media (max-width: 756px){
@@ -41,7 +44,9 @@
   #banner_text {
     top: 35%;
   }
-
+  .text-full-height {
+    font-size: 50px;
+  }
 }
 
 #klasse_tittel {
@@ -148,4 +153,8 @@ li {
 
 .outline-grey:hover {
   background-color: #eaeaea;
+}
+
+.full-height {
+  height: 100%;
 }
