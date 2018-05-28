@@ -42,11 +42,11 @@ class HomeController < ApplicationController
     @campus = 'Kvadraturen'
     matkroken = {from: 'Kirkegata+24,+0153+Oslo', to: 'Kongens+gate+23,+0153+Oslo'}
     @matkroken = Directions.new(matkroken, session[:locale])
-    coopKvad = {from: 'Kirkegata+24,+0153+Oslo', to: 'Postgirobygget,+Biskop+Gunnerus+gate+14,+0155+Oslo'}
+    coopKvad = {from: 'Kirkegata+24,+0153+Oslo', to: '59.911627,10.753782'}
     @coopKvad = Directions.new(coopKvad, session[:locale])
-    joker = {from: 'Kirkegata+24,+0153+Oslo', to: 'Jernbanetorget+1,+0154+Oslo'}
+    joker = {from: 'Kirkegata+24,+0153+Oslo', to: '59.911493,10.751754'}
     @joker = Directions.new(joker, session[:locale])
-    kiwiKvad = {from: 'Kirkegata+24,+0153+Oslo', to: 'Byporten+Shopping,+Jernbanetorget+9,+0154+Oslo'}
+    kiwiKvad = {from: 'Kirkegata+24,+0153+Oslo', to: '59.912025,10.750903'}
     @kiwiKvad = Directions.new(kiwiKvad, session[:locale])
     steenogStrom = {from: 'Kirkegata+24,+0153+Oslo', to: 'Nedre+Slottsgate+8,+0157+Oslo'}
     @steenogStrom = Directions.new(steenogStrom, session[:locale])
