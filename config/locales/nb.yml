@@ -74,7 +74,7 @@ nb:
     address: "Adresse"
     country: "Norge"
   fjerdingen:
-    weekdays: Man-Fre
+    weekdays: man-fre
     weekends: Lør-Søn
     telephone: Tlf
     employees: Ansatte
@@ -89,4 +89,4 @@ nb:
     bar: Studentbar
     thursday: Torsdag
     friday: Fredag
-    reception: Resepsjonen er åpen
+    reception: Ansatte er tilgjengelige
