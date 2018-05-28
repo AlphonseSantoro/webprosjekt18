@@ -26,6 +26,11 @@ class HomeController < ApplicationController
   def kvadraturen
     @bikes = GoogleMaps.new(params).city_bikes({lat: 59.9111398, long: 10.7450366})
     @campus = 'Kvadraturen'
+    kiwi = {
+        from: 'Kirkegata+24,+0153+Oslo',
+        to: 'Byporten+Shopping,+Jernbanetorget+9,+0154+Oslo'
+    }
+    @kiwi = Directions.new(kiwi, session[:locale])
   end
 
   def vulkan

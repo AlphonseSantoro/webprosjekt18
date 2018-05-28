@@ -180,3 +180,20 @@ function campus() {
     map.fitBounds(bounds);
     map.setCenter(bounds.getCenter());
 }
+
+function butikkMarkor(centerlat, centerlng, btklat, btklng, tekst){
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: centerlat, lng: centerlng },
+        zoom: 15
+    });
+
+    let marker = new google.maps.Marker({
+        map: map,
+        position: { lat: btklat, lng: btklng }
+    });
+    let infoWindow = new google.maps.InfoWindow();
+    google.maps.event.addListener(marker, 'click', function() {
+        infoWindow.setContent(tekst);
+        infoWindow.open(map, marker);
+    });
+}

@@ -52,6 +52,10 @@ function removeLine() {
     }
 }
 
+function removeMarkers() {
+    marker.setMap(null);
+}
+
 function locateUser(id) {
     navigator.geolocation.getCurrentPosition(function(position) {
         document.getElementById(id).value = position.coords.latitude + "," + position.coords.longitude;
