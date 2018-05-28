@@ -34,7 +34,7 @@
             </div>
           <% end %>
         </div>
-        <div id="travel2" class="col-12 col-md-12 col-lg-12 collapse <%= params[:position].nil? ? '' : 'show' %>">
+        <div id="travel2" class="col-12 col-md-12 col-lg-6 collapse <%= params[:position].nil? ? '' : 'show' %>">
           <%= form_tag '/logistics', method: :get, class: 'pl-5 pt-lg-4' do %>
             <%= hidden_field_tag 'location', params[:location] %>
             <%= label_tag "#{t('logistics.travel')} #{t('to')}", nil, class: 'text-dark text-size-large' %>
