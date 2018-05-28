@@ -2,7 +2,7 @@ en:
   planner: "Route Guidance"
   opening_hours: "opening hours"
   welcome: "Welcome to the studentguide"
-  for_us: "- For us at the college!"
+  for_us: "- For us at Høyskolen Kristiania!"
   from: "from"
   to: "to"
   between: "between"
@@ -36,10 +36,10 @@ en:
     week_offers: "This weeks offers"
     info: "More information on"
     operator: "Central operator for all campuses"
-    header_text: "Welcome to the student assistant for anyone who attends. It's not always easy to find the way in the big city,
+    header_text: "Welcome to the student assistant for anyone who attends Høyskolen Kristiania. It's not always easy to find your way in the big city,
                   even for those who has attended the school for a while.
-                  Because we do not always have enough time to explore what's around! Here is the perfect tool for those
-                  who wants info about what's around and how to find the best way to travel between the campuses!"
+                  Because we do not always have enough time to explore the local area! Here is the perfect tool for those
+                  who wants info about what can be found around the campuses and how to best travel between the campuses!"
     mail_list: "Contact e-mails"
   Kvadraturen:
     weekdays: "Mon - Fri"
@@ -73,7 +73,7 @@ en:
     address: "Address"
     contry: "Norway"
   fjerdingen:
-    weekdays: Mon-Fri
+    weekdays: mon-fri
     weekends: Sat-Sun
     telephone: Tel
     employees: Employees
@@ -83,9 +83,11 @@ en:
     stores: Grocery Stores
     restaurants: Restaurants
     fastfood: Fast Food
-    auddesc: Ground floor, by the entrence(F101)
+    auddesc: The auditorium F101 can be found on the ground floor. When you enter the building, go straight and you'll find the auditorium on your left hand side at the end of the hall past the bathrooms.
     cantine: Cafeteria
+    cantinedesc: The cafeteria can be found on the ground floor. When you enter the building, turn right after the reception and go straight.
     bar: Student Bar
+    bardesc: The student bar "Skjenkestua" can be found in the cafeteria.
     thursday: Thursday
     friday: Friday
     reception: Employees are available

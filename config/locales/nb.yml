@@ -2,7 +2,7 @@ nb:
   planner: "Veiviser"
   opening_hours: "åpningstider"
   welcome: "Velkommen til Studenthjelper'n"
-  for_us: "- For oss på høyskolen!"
+  for_us: "- For oss på Høyskolen Kristiania!"
   from: "Fra"
   to: "Til"
   between: "mellom"
@@ -36,10 +36,10 @@ nb:
     week_offers: "Ukas' Mat tilbud"
     info: "Mer informasjon på"
     operator: "Felles sentralbord for all campus"
-    header_text: "Velkommen til studenthjelpern for alle som går her. Vi har ikke alltid like lett for å finne frem i stor by, også
+    header_text: "Velkommen til studenthjelpern for alle studenter ved Høyskolen Kristiania. Det er ikke alltid like lett å finne frem i storbyen, også
                         for oss som har gått her en stund!
                         For det er jo ikke alltid vi har nok tid til å utforske det som er rundt! Her er det perfekte verktøyet for deg
-                        som vil ha info om det som er rundt og
+                        som vil ha info om det som er i området og
                         hvordan best komme seg immellom campusene!"
     mail_list: "Kontakt e-post"
   Kvadraturen:
@@ -84,9 +84,11 @@ nb:
     stores: Matbutikker
     restaurants: Spisesteder
     fastfood: Hurtigmat
-    auddesc: Første etasje, ved inngangen(F101)
+    auddesc: Gå rett frem når du kommer inn hovedinngangen. Du finner auditorium F101 på venstre hånd i enden.
     cantine: Kantine
+    cantinedesc: Kantinen finner du i første etasje. Når du kommer inn hovedinngangen, gå første til høyre og rett frem.
     bar: Studentbar
+    bardesc: Studentbaren "Skjenkestua" finner du i kantinen.
     thursday: Torsdag
     friday: Fredag
     reception: Ansatte er tilgjengelige

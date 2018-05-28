@@ -13,7 +13,7 @@
     <div class="row pb-md-3 pb-lg-3">
       <div class="col-md-4 col-lg-4 col-12">
         <h2><%= t('opening_hours').capitalize %></h2>
-        <p><%= t('fjerdingen.weekdays')%>: 08.00 – 24.00<br>
+        <p><%= t('Kvadraturen.weekdays')%>: 08.00 – 24.00<br>
           <%= t('fjerdingen.weekends')%>: 10.00 – 23.00<br>
           <%= t('fjerdingen.telephone')%>: 22 59 60 00</p>
       </div>
@@ -21,7 +21,7 @@
       <div class="col-md-4 col-lg-4 col-12">
         <h2><%= t('fjerdingen.employees')%></h2>
         <p class="pt-2">
-          <%= t('fjerdingen.weekdays')%>: 08.00 – 16.00</p>
+          <%= t('fjerdingen.reception')%> <%= t('fjerdingen.weekdays')%>: 08.00 – 16.00</p>
       </div>
 
       <div class="col-md-4 col-lg-4 col-12">
@@ -76,13 +76,15 @@
 
       <div class="col-md-4 col-lg-4 col-12">
         <h1><%= t('fjerdingen.cantine')%></h1>
-        <p>10:00-15:00</p>
+        <p><%= t('fjerdingen.cantinedesc')%></p>
+        <p><%= t('Kvadraturen.weekdays')%> 10:00-15:00</p>
       </div>
 
       <div class="col-md-4 col-lg-4 col-12">
         <h1><%= t('fjerdingen.bar')%></h1>
-        <p><%= t('fjerdingen.thursday')%>: 05:00-12:00</p>
-        <p><%= t('fjerdingen.friday')%>: 03:00-12:00</p>
+        <p><%= t('fjerdingen.bardesc')%></p>
+        <p><%= t('fjerdingen.thursday')%>: 05:00-12:00<br>
+        <%= t('fjerdingen.friday')%>: 03:00-12:00</p>
       </div>
     </div>
   </div>
