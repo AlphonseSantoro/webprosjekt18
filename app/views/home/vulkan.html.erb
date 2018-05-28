@@ -39,25 +39,25 @@
         <div class="card card-body background_blue">
           <div><%= t('vulkan.grocery').capitalize %></div>
           <ul>
-            <li>Rema 1000 (Vulkan)</li>
-            <li>Coop Mega (Alexander Kiellands plass)</li>
-            <li>Kiwi (Fredesborg)</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @rema.routes.first.overview_polyline %>, <%= @rema.routes.first.bounds %>);">Rema 1000 (Byporten)</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @coopmega.routes.first.overview_polyline %>, <%= @coopmega.routes.first.bounds %>);">Coop Mega (Alexander kiellands plass)</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @kiwifred.routes.first.overview_polyline %>, <%= @kiwifred.routes.first.bounds %>);">Kiwi Fredensborg</li>
           </ul>
         </div>
         <div class="card card-body background_blue">
           <div><%= t('vulkan.dining').capitalize %></div>
           <ul>
-            <li>Mathallen Oslo</li>
-            <li>Døgnvill Burger Vulkan</li>
-            <li>Ristorante Ferro</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @mathallen.routes.first.overview_polyline %>, <%= @mathallen.routes.first.bounds %>);">Mathallen Oslo</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @dognvill.routes.first.overview_polyline %>, <%= @dognvill.routes.first.bounds %>);">Døgnvill burger Vulkan</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @ferro.routes.first.overview_polyline %>, <%= @ferro.routes.first.bounds %>);"<li>Ristorante Ferro</li>
           </ul>
         </div>
         <div class="card card-body background_blue">
           <div><%= t('vulkan.fastfood').capitalize %></div>
           <ul>
-            <li>McDonald's</li>
-            <li>Grytelokket Avd Storgata</li>
-            <li>Subway</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @mcd.routes.first.overview_polyline %>, <%= @mcd.routes.first.bounds %>);">Mcdonalds</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @grytelokket.routes.first.overview_polyline %>, <%= @grytelokket.routes.first.bounds %>);"<li>Grytelokket Avd Storgata</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @subwayvul.routes.first.overview_polyline %>, <%= @subwayvul.routes.first.bounds %>);">Subway</li>
           </ul>
         </div>
       </div>
