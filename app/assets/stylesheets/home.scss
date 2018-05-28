@@ -159,3 +159,11 @@ li {
   height: 100%;
 }
 
+.butikker {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.butikker:hover {
+  color: #f7f7f7;
+}
