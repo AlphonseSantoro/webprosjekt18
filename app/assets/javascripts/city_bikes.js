@@ -197,3 +197,47 @@ function butikkMarkor(centerlat, centerlng, btklat, btklng, tekst){
         infoWindow.open(map, marker);
     });
 }
+
+function butikkRute(list, bounds) {
+    let uni = {
+        path: 'M496 128v16a8 8 0 0 1-8 8h-24v12c0 6.627-5.373 12-12 12H60c-6.627 0-12-5.373-12-12v-12H24a8 8 0 0 1-8-8v-16a8 8 0 0 1 4.941-7.392l232-88a7.996 7.996 0 0 1 6.118 0l232 88A8 8 0 0 1 496 128zm-24 304H40c-13.255 0-24 10.745-24 24v16a8 8 0 0 0 8 8h464a8 8 0 0 0 8-8v-16c0-13.255-10.745-24-24-24zM96 192v192H60c-6.627 0-12 5.373-12 12v20h416v-20c0-6.627-5.373-12-12-12h-36V192h-64v192h-64V192h-64v192h-64V192H96z',
+        fillColor: '#4f5f82',
+        fillOpacity: 0.8,
+        scale: 0.07,
+        strokeWeight: 1
+    };
+
+    removeLine();
+    lines = [];
+    for(let i = 0; i< list.length; i++){
+        lines.push({lat: list[i][0], lng: list[i][1]})
+    }
+
+    marker = new google.maps.Marker({
+        position: {lat: list[0][0], lng: list[0][1]},
+        title: 'A',
+        map: map,
+        icon: uni
+    });
+    marker = new google.maps.Marker({
+        position: {lat: list[list.length-1][0], lng: list[list.length-1][1]},
+        title: 'B',
+        map: map
+    });
+    route = new google.maps.Polyline({
+        path: lines,
+        geodesic: true,
+        strokeColor: '#4f5f82',
+        strokeOpacity: 1.0,
+        strokeWeight: 5
+    });
+
+    northeast = new google.maps.LatLng(bounds.northeast.lat, bounds.northeast.lng);
+    southwest = new google.maps.LatLng(bounds.southwest.lat, bounds.southwest.lng);
+    bounds = new google.maps.LatLngBounds();
+    bounds.extend(northeast);
+    bounds.extend(southwest);
+    map.fitBounds(bounds);
+    map.setCenter(bounds.getCenter());
+    route.setMap(map);
+}
