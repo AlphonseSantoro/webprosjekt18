@@ -167,3 +167,14 @@ li {
 .butikker:hover {
   color: #ededed;
 }
+
+a {
+  &:visited, &:link, &:active{
+    color: white;
+  }
+}
+
+.language {
+  text-decoration: none;
+  color: white;
+}
