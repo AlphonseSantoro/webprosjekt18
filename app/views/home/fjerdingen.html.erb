@@ -40,23 +40,23 @@
         <div class="card card-body background_blue">
           <div><%= t('fjerdingen.stores')%></div>
           <ul>
-            <li>Food Express</li>
-            <li>Coop Prix (Hausmannsgate)</li>
-            <li>Rema 1000 Storgata</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @foodexpress.routes.first.overview_polyline %>, <%= @foodexpress.routes.first.bounds %>);">Food Express</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @prix.routes.first.overview_polyline %>, <%= @prix.routes.first.bounds %>);">Coop Prix (Hausmannsgate)</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @rema1000.routes.first.overview_polyline %>, <%= @rema1000.routes.first.bounds %>);">Rema 1000</li>
           </ul>
         </div>
         <div class="card card-body background_blue">
           <div><%= t('fjerdingen.restaurants')%></div>
           <ul>
-            <li>Südøst</li>
-            <li>Freddy Fuego Hausmannsgate</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @sudost.routes.first.overview_polyline %>, <%= @sudost.routes.first.bounds %>);">Südøst</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @freddy.routes.first.overview_polyline %>, <%= @freddy.routes.first.bounds %>);">Freddy Fuego Hausmannsgate</li>
           </ul>
         </div>
         <div class="card card-body background_blue">
           <div><%= t('fjerdingen.fastfood')%></div>
           <ul>
-            <li>Burger King Torggata</li>
-            <li>Dominos - Schousplass</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @burgerking.routes.first.overview_polyline %>, <%= @burgerking.routes.first.bounds %>);">Burger King Torggata</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @dominos.routes.first.overview_polyline %>, <%= @dominos.routes.first.bounds %>);">Dominos - Schousplass</li>
           </ul>
         </div>
       </div>

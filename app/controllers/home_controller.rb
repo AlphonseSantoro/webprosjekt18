@@ -21,6 +21,20 @@ class HomeController < ApplicationController
   def fjerdingen
     @bikes = GoogleMaps.new(params).city_bikes({ lat: 59.916114, long: 10.759968 })
     @campus = 'Fjerdingen'
+    foodexpress = {from: 'Chr.+Krohgs+gate+32,+0186+Oslo', to: 'Chr.+Krohgs+gate+41,+0186+Oslo'}
+    @foodexpress = Directions.new(foodexpress, session[:locale])
+    prix = {from: 'Chr.+Krohgs+gate+32,+0186+Oslo', to: 'Hausmanns+gate+19,+0182+Oslo'}
+    @prix = Directions.new(prix, session[:locale])
+    rema1000 = {from: 'Chr.+Krohgs+gate+32,+0186+Oslo', to: 'Chr.+Krohgs+gate+1-11,+0186 Oslo'}
+    @rema1000 = Directions.new(rema1000, session[:locale])
+    sudost = {from: 'Chr.+Krohgs+gate+32,+0186+Oslo', to: 'Trondheimsveien+5,+0560+Oslo'}
+    @sudost = Directions.new(sudost, session[:locale])
+    freddy = {from: 'Chr.+Krohgs+gate+32,+0186+Oslo', to: 'Hausmanns+gate+31a,+0182+Oslo'}
+    @freddy = Directions.new(freddy, session[:locale])
+    burgerking = {from: 'Chr.+Krohgs+gate+32,+0186+Oslo', to: 'Torggata+24,+0183+Oslo'}
+    @burgerking = Directions.new(burgerking, session[:locale])
+    dominos = {from: 'Chr.+Krohgs+gate+32,+0186+Oslo', to: 'Thorvald+Meyers+gate+72,+0552+Oslo'}
+    @dominos = Directions.new(dominos, session[:locale])
   end
 
   def kvadraturen
