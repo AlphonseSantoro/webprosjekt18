@@ -48,16 +48,16 @@
       </div>
     </div>
     <!-- Student Tilbud -->
-    <div class="container">
+    <div class="container-fluid">
       <div class="row background-daisy">
         <div class="col-12 col-md-4 col-lg-4 text-light">
           <div class="card card-body background_blue" style="height: 100%">
             <div><h5><%= t('main.mail_list') %>:</h5></div>
             <ul>
-              <li><%= mail_to("student@kristiania.no", nil, class: 'text-light') %>(<%= t('main.active_students') %>)
+              <li><%= mail_to("student@kristiania.no", nil, class: 'text-light') %> (<%= t('main.active_students') %>)
               </li>
-              <li><%= mail_to("eksamen@kristiania.no", nil, class: 'text-light') %>(<%= t('main.exams') %>)</li>
-              <li><%= mail_to("faktura@kristiania.no", nil, class: 'text-light') %>(<%= t('main.invoice') %>)</li>
+              <li><%= mail_to("eksamen@kristiania.no", nil, class: 'text-light') %> (<%= t('main.exams') %>)</li>
+              <li><%= mail_to("faktura@kristiania.no", nil, class: 'text-light') %> (<%= t('main.invoice') %>)</li>
               <li><a href="https://kristiania.no/ansatte" class="text-light"><%= t('main.employees') %></a></li>
             </ul>
           </div>

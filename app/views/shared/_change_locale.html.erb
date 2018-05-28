@@ -1,3 +1,5 @@
-<li class="nav-item nav-link pr-0"><%= link_to 'English', controller: 'home', action: 'change_locale', id: 'en' %></li>
-<li class="nav-item nav-link pl-0 pr-0">/</li>
-<li class="nav-item nav-link pl-0"><%= link_to 'Norsk', controller: 'home', action: 'change_locale', id: 'nb' %></li>
+<div class="row">
+  <li class="nav-item nav-link pl-3 pr-0 text-white language"><%= link_to 'English', controller: 'home', action: 'change_locale', id: 'en' %></li>
+  <li class="nav-item nav-link text-white"> / </li>
+  <li class="nav-item nav-link pl-0 text-white"><%= link_to 'Norsk', controller: 'home', action: 'change_locale', id: 'nb' %></li>
+</div>
