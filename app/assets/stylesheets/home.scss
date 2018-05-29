@@ -169,7 +169,7 @@ li {
 }
 
 a {
-  &:visited, &:link, &:active{
+  &:visited, &:link, &:active, &:hover{
     color: white;
   }
 }

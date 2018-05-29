@@ -42,25 +42,25 @@
         <div class="card card-body background_blue">
           <div><%= t('Kvadraturen.Groceries')%></div>
           <ul>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @matkroken.routes.first.overview_polyline %>, <%= @matkroken.routes.first.bounds %>);">Matkroken (Steen &amp; Strøm)</li>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @coopKvad.routes.first.overview_polyline %>, <%= @coopKvad.routes.first.bounds %>);">Coop Prix (Oslo S)</li>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @joker.routes.first.overview_polyline %>, <%= @joker.routes.first.bounds %>);">Joker (Oslo S)</li>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @kiwiKvad.routes.first.overview_polyline %>, <%= @kiwiKvad.routes.first.bounds %>);">Kiwi (Byporten)</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @matkroken.routes.first.overview_polyline %>, <%= @matkroken.routes.first.bounds %>);"><a href="#map" class=text-light">Matkroken (Steen &amp; Strøm)</a></li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @coopKvad.routes.first.overview_polyline %>, <%= @coopKvad.routes.first.bounds %>);"><a href="#map" class=text-light">Coop Prix (Oslo S)</a></li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @joker.routes.first.overview_polyline %>, <%= @joker.routes.first.bounds %>);"><a href="#map" class=text-light">Joker (Oslo S)</a></li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @kiwiKvad.routes.first.overview_polyline %>, <%= @kiwiKvad.routes.first.bounds %>);"><a href="#map" class=text-light">Kiwi (Byporten)</a></li>
           </ul>
         </div>
         <div class="card card-body background_blue">
           <div><%= t('Kvadraturen.Restuarants')%></div>
           <ul>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @steenogStrom.routes.first.overview_polyline %>, <%= @steenogStrom.routes.first.bounds %>);">Steen &amp; Strøm</li>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @ostBaneHallen.routes.first.overview_polyline %>, <%= @ostBaneHallen.routes.first.bounds %>);">Østbanehallen</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @steenogStrom.routes.first.overview_polyline %>, <%= @steenogStrom.routes.first.bounds %>);"><a href="#map" class=text-light">Steen &amp; Strøm</a></li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @ostBaneHallen.routes.first.overview_polyline %>, <%= @ostBaneHallen.routes.first.bounds %>);"><a href="#map" class=text-light">Østbanehallen</a></li>
           </ul>
         </div>
         <div class="card card-body background_blue">
           <div><%= t('Kvadraturen.FastFood')%></div>
           <ul>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @burgerKingKvad.routes.first.overview_polyline %>, <%= @burgerKingKvad.routes.first.bounds %>);">Burger King</li>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @peppesPizzaKvad.routes.first.overview_polyline %>, <%= @peppesPizzaKvad.routes.first.bounds %>);">Peppes Pizza</li>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @subwayKvad.routes.first.overview_polyline %>, <%= @subwayKvad.routes.first.bounds %>);">Subway</li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @burgerKingKvad.routes.first.overview_polyline %>, <%= @burgerKingKvad.routes.first.bounds %>);"><a href="#map" class=text-light">Burger King</a></li>
+            <a class="butikker" onclick="initMap(); butikkRute(<%= @peppesPizzaKvad.routes.first.overview_polyline %>, <%= @peppesPizzaKvad.routes.first.bounds %>);"><a href="#map" class=text-light">Peppes Pizza</a></li>
+            <li class="butikker" onclick="initMap(); butikkRute(<%= @subwayKvad.routes.first.overview_polyline %>, <%= @subwayKvad.routes.first.bounds %>);"><a href="#map" class=text-light">Subway</a></li>
           </ul>
         </div>
       </div>
