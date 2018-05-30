@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  campus: MyString
+  store: MyString
+  polyline: MyString
+
+two:
+  campus: MyString
+  store: MyString
+  polyline: MyString

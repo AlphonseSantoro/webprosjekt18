@@ -39,25 +39,25 @@
         <div class="card card-body background_blue">
           <div><%= t('vulkan.grocery').capitalize %></div>
           <ul>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @rema.routes.first.overview_polyline %>, <%= @rema.routes.first.bounds %>);">Rema 1000 (Byporten)</li>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @coopmega.routes.first.overview_polyline %>, <%= @coopmega.routes.first.bounds %>);">Coop Mega (Alexander kiellands plass)</li>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @kiwifred.routes.first.overview_polyline %>, <%= @kiwifred.routes.first.bounds %>);">Kiwi Fredensborg</li>
+            <li class="butikker" onclick="goToByScroll('map'); butikkRute(<%= @rema.polyline %>, <%= @rema.bounds %>);">Rema 1000 (Byporten)</li>
+            <li class="butikker" onclick="goToByScroll('map'); butikkRute(<%= @coopmega.polyline %>, <%= @coopmega.bounds %>);">Coop Mega (Alexander kiellands plass)</li>
+            <li class="butikker" onclick="goToByScroll('map'); butikkRute(<%= @kiwifred.polyline %>, <%= @kiwifred.bounds %>);">Kiwi Fredensborg</li>
           </ul>
         </div>
         <div class="card card-body background_blue">
           <div><%= t('vulkan.dining').capitalize %></div>
           <ul>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @mathallen.routes.first.overview_polyline %>, <%= @mathallen.routes.first.bounds %>);">Mathallen Oslo</li>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @dognvill.routes.first.overview_polyline %>, <%= @dognvill.routes.first.bounds %>);">Døgnvill burger Vulkan</li>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @ferro.routes.first.overview_polyline %>, <%= @ferro.routes.first.bounds %>);"<li>Ristorante Ferro</li>
+            <li class="butikker" onclick="goToByScroll('map'); butikkRute(<%= @mathallen.polyline %>, <%= @mathallen.bounds %>);">Mathallen Oslo</li>
+            <li class="butikker" onclick="goToByScroll('map'); butikkRute(<%= @dognvill.polyline %>, <%= @dognvill.bounds %>);">Døgnvill burger Vulkan</li>
+            <li class="butikker" onclick="goToByScroll('map'); butikkRute(<%= @ferro.polyline %>, <%= @ferro.bounds %>);">Ristorante Ferro</li>
           </ul>
         </div>
         <div class="card card-body background_blue">
           <div><%= t('vulkan.fastfood').capitalize %></div>
           <ul>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @mcd.routes.first.overview_polyline %>, <%= @mcd.routes.first.bounds %>);">Mcdonalds</li>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @grytelokket.routes.first.overview_polyline %>, <%= @grytelokket.routes.first.bounds %>);"<li>Grytelokket Avd Storgata</li>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @subwayvul.routes.first.overview_polyline %>, <%= @subwayvul.routes.first.bounds %>);">Subway</li>
+            <li class="butikker" onclick="goToByScroll('map'); butikkRute(<%= @mcd.polyline %>, <%= @mcd.bounds %>);">Mcdonalds</li>
+            <li class="butikker" onclick="goToByScroll('map'); butikkRute(<%= @grytelokket.polyline %>, <%= @grytelokket.bounds %>);"> Grytelokket Avd Storgata</li>
+            <li class="butikker" onclick="goToByScroll('map'); butikkRute(<%= @subwayvul.polyline %>, <%= @subwayvul.bounds %>);">Subway</li>
           </ul>
         </div>
       </div>
@@ -90,5 +90,13 @@
 
 </div> <!-- END BODY DIV -->
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE&libraries=places&callback=campus"
-        async defer></script>
+<script type="text/javascript">
+    if(window.google) {
+        campus();
+    } else {
+        $.ajax("https://maps.googleapis.com/maps/api/js?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE&libraries=places&callback=<%= @callback %>", {
+            crossDomain: true,
+            dataType: 'script'
+        });
+    }
+</script>

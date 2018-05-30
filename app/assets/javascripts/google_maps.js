@@ -1,6 +1,6 @@
-var map;
-var infoWindow;
-var service;
+let map;
+let infoWindow;
+let service;
 let directionsDisplay;
 let route;
 
@@ -23,11 +23,13 @@ function rute(list, bounds) {
             title: 'A',
             map: map
     });
+    markersArray.push(marker);
     marker = new google.maps.Marker({
         position: {lat: list[list.length-1][0], lng: list[list.length-1][1]},
         title: 'B',
         map: map
     });
+    markersArray.push(marker);
     route = new google.maps.Polyline({
         path: lines,
         geodesic: true,
@@ -53,7 +55,10 @@ function removeLine() {
 }
 
 function removeMarkers() {
-    marker.setMap(null);
+    for (let i = 0; i < markersArray.length; i++ ) {
+        markersArray[i].setMap(null);
+    }
+    markersArray.length = 0;
 }
 
 function locateUser(id) {
