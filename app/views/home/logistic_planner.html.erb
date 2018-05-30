@@ -58,5 +58,14 @@
     </div>
   </div>
 </div>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE&callback=initMap&libraries=geometry"
-        async defer></script>
+
+<script type="text/javascript">
+    if(window.google) {
+        initMap();
+    } else {
+        $.ajax("https://maps.googleapis.com/maps/api/js?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE&libraries=geometry&callback=<%= @callback %>", {
+            crossDomain: true,
+            dataType: 'script'
+        });
+    }
+</script>

@@ -40,23 +40,23 @@
         <div class="card card-body background_blue">
           <div><%= t('fjerdingen.stores')%></div>
           <ul>
-             <li  class="butikker" onclick="initMap(); butikkRute(<%= @foodexpress.routes.first.overview_polyline %>, <%= @foodexpress.routes.first.bounds %>);"><a href="#map" class=text-light">Food Express</a></li>
-             <li class="butikker" onclick="initMap(); butikkRute(<%= @prix.routes.first.overview_polyline %>, <%= @prix.routes.first.bounds %>);"><a href="#map" class=text-light">Coop Prix (Hausmannsgate)</a></li>
-             <li class="butikker" onclick="initMap(); butikkRute(<%= @rema1000.routes.first.overview_polyline %>, <%= @rema1000.routes.first.bounds %>);"><a href="#map" class=text-light">Rema 1000</a></li>
+             <li class="butikker" onclick="goToByScroll('map'); butikkRute(<%= @foodexpress.polyline %>, <%= @foodexpress.bounds %>);">Food Express</li>
+             <li class="butikker" onclick="goToByScroll('map'); butikkRute(<%= @prix.polyline %>, <%= @prix.bounds %>);">Coop Prix (Hausmannsgate)</li>
+             <li class="butikker" onclick="goToByScroll('map'); butikkRute(<%= @rema1000.polyline %>, <%= @rema1000.bounds %>);">Rema 1000</li>
           </ul>
         </div>
         <div class="card card-body background_blue">
           <div><%= t('fjerdingen.restaurants')%></div>
           <ul>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @sudost.routes.first.overview_polyline %>, <%= @sudost.routes.first.bounds %>);"><a href="#map" class=text-light">Südøst</a></li>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @freddy.routes.first.overview_polyline %>, <%= @freddy.routes.first.bounds %>);"><a href="#map" class=text-light">Freddy Fuego Hausmannsgate</a></li>
+            <li class="butikker" onclick="goToByScroll('map'); butikkRute(<%= @sudost.polyline %>, <%= @sudost.bounds %>);">Südøst</li>
+            <li class="butikker" onclick="goToByScroll('map'); butikkRute(<%= @freddy.polyline %>, <%= @freddy.bounds %>);">Freddy Fuego Hausmannsgate</li>
           </ul>
         </div>
         <div class="card card-body background_blue">
           <div><%= t('fjerdingen.fastfood')%></div>
           <ul>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @burgerking.routes.first.overview_polyline %>, <%= @burgerking.routes.first.bounds %>);"><a href="#map" class=text-light">Burger King Torggata</a></li>
-            <li class="butikker" onclick="initMap(); butikkRute(<%= @dominos.routes.first.overview_polyline %>, <%= @dominos.routes.first.bounds %>);"> <a href="#map" class=text-light">Dominos - Schousplass </a></li>
+            <li class="butikker" onclick="goToByScroll('map'); butikkRute(<%= @burgerking.polyline %>, <%= @burgerking.bounds %>);">Burger King Torggata</li>
+            <li class="butikker" onclick="goToByScroll('map'); butikkRute(<%= @dominos.polyline %>, <%= @dominos.bounds %>);">Dominos - Schousplass</li>
           </ul>
         </div>
       </div>
@@ -90,5 +90,13 @@
   </div>
 </div> <!-- END BODY DIV -->
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE&libraries=places&callback=campus"
-        async defer></script>
+<script type="text/javascript">
+    if(window.google) {
+        campus();
+    } else {
+        $.ajax("https://maps.googleapis.com/maps/api/js?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE&libraries=places&callback=<%= @callback %>", {
+            crossDomain: true,
+            dataType: 'script'
+        });
+    }
+</script>

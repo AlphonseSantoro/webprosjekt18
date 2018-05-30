@@ -8,6 +8,7 @@ class HomeController < ApplicationController
   end
 
   def logistic_planner
+    @callback = 'initMap'
     if params[:from].nil? && params[:to].nil?
       params[:from] = 'Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo'
       params[:to] = 'Kirkegata+24,+Oslo'
@@ -19,70 +20,51 @@ class HomeController < ApplicationController
   end
 
   def fjerdingen
+    @callback = 'campus'
     @bikes = GoogleMaps.new(params).city_bikes({ lat: 59.916114, long: 10.759968 })
     @campus = 'Fjerdingen'
-    foodexpress = {from: 'Chr.+Krohgs+gate+32,+0186+Oslo', to: 'Chr.+Krohgs+gate+41,+0186+Oslo'}
-    @foodexpress = Directions.new(foodexpress, session[:locale])
-    prix = {from: 'Chr.+Krohgs+gate+32,+0186+Oslo', to: 'Hausmanns+gate+19,+0182+Oslo'}
-    @prix = Directions.new(prix, session[:locale])
-    rema1000 = {from: 'Chr.+Krohgs+gate+32,+0186+Oslo', to: 'Chr.+Krohgs+gate+1-11,+0186 Oslo'}
-    @rema1000 = Directions.new(rema1000, session[:locale])
-    sudost = {from: 'Chr.+Krohgs+gate+32,+0186+Oslo', to: 'Trondheimsveien+5,+0560+Oslo'}
-    @sudost = Directions.new(sudost, session[:locale])
-    freddy = {from: 'Chr.+Krohgs+gate+32,+0186+Oslo', to: 'Hausmanns+gate+31a,+0182+Oslo'}
-    @freddy = Directions.new(freddy, session[:locale])
-    burgerking = {from: 'Chr.+Krohgs+gate+32,+0186+Oslo', to: 'Torggata+24,+0183+Oslo'}
-    @burgerking = Directions.new(burgerking, session[:locale])
-    dominos = {from: 'Chr.+Krohgs+gate+32,+0186+Oslo', to: 'Thorvald+Meyers+gate+72,+0552+Oslo'}
-    @dominos = Directions.new(dominos, session[:locale])
+    butikker = CampusPolyline.where(campus: @campus)
+    @foodexpress = butikker.where(store: 'foodexpress').first
+    @prix = butikker.where(store: 'prix').first
+    @rema1000 = butikker.where(store: 'rema1000').first
+    @sudost = butikker.where(store: 'sudost').first
+    @freddy = butikker.where(store: 'freddy').first
+    @ferro = butikker.where(store: 'ferro').first
+    @burgerking = butikker.where(store: 'burgerking').first
+    @dominos = butikker.where(store: 'dominos').first
   end
 
   def kvadraturen
+    @callback = 'campus'
     @bikes = GoogleMaps.new(params).city_bikes({lat: 59.9111398, long: 10.7450366})
     @campus = 'Kvadraturen'
-    matkroken = {from: 'Kirkegata+24,+0153+Oslo', to: 'Kongens+gate+23,+0153+Oslo'}
-    @matkroken = Directions.new(matkroken, session[:locale])
-    coopKvad = {from: 'Kirkegata+24,+0153+Oslo', to: '59.911627,10.753782'}
-    @coopKvad = Directions.new(coopKvad, session[:locale])
-    joker = {from: 'Kirkegata+24,+0153+Oslo', to: '59.911493,10.751754'}
-    @joker = Directions.new(joker, session[:locale])
-    kiwiKvad = {from: 'Kirkegata+24,+0153+Oslo', to: '59.912025,10.750903'}
-    @kiwiKvad = Directions.new(kiwiKvad, session[:locale])
-    steenogStrom = {from: 'Kirkegata+24,+0153+Oslo', to: 'Nedre+Slottsgate+8,+0157+Oslo'}
-    @steenogStrom = Directions.new(steenogStrom, session[:locale])
-    ostBaneHallen = {from: 'Kirkegata+24,+0153+Oslo', to: 'Ostbanehallen,+Jernbanetorget+1,+0154+Oslo'}
-    @ostBaneHallen = Directions.new(ostBaneHallen, session[:locale])
-    burgerKingKvad = {from: 'Kirkegata+24,+0153+Oslo', to: 'Burger+King,+Karl+Johans+gate+8,+0154+Oslo'}
-    @burgerKingKvad = Directions.new(burgerKingKvad, session[:locale])
-    peppesPizzaKvad = {from: 'Kirkegata+24,+0153+Oslo', to: 'Jernbanetorget+1,+0154+Oslo'}
-    @peppesPizzaKvad = Directions.new(peppesPizzaKvad, session[:locale])
-    subwayKvad = {from: 'Kirkegata+24,+0153+Oslo', to: 'Kirkegata+32,+0153+Oslo'}
-    @subwayKvad = Directions.new(subwayKvad, session[:locale])
+    butikker = CampusPolyline.where(campus: @campus)
+    @matkroken = butikker.where(store: 'matkroken').first
+    @coopKvad = butikker.where(store: 'coopKvad').first
+    @joker = butikker.where(store: 'joker').first
+    @kiwiKvad = butikker.where(store: 'kiwiKvad').first
+    @steenogStrom = butikker.where(store: 'steenogStrom').first
+    @ostBaneHallen = butikker.where(store: 'ostBaneHallen').first
+    @burgerKingKvad = butikker.where(store: 'burgerKingKvad').first
+    @peppesPizzaKvad = butikker.where(store: 'peppesPizzaKvad').first
+    @subwayKvad = butikker.where(store: 'subwayKvad').first
+    puts @matkroken.inspect
   end
 
   def vulkan
+    @callback = 'campus'
     @bikes = GoogleMaps.new(params).city_bikes({ lat: 59.923312, long: 10.752354 })
     @campus = 'Vulkan'
-    rema = {from: 'Vulkan+19+0178+oslo', to: 'Rema+1000+Vulkan, Maridalsveien+15, 0178+oslo'}
-    @rema = Directions.new(rema, session[:locale])
-    coopmega = {from: 'Vulkan+19+0178+oslo', to: 'Coop+Mega+Alexander+Kiellands, Waldemar+Thranes+gate 72, 0175+oslo'}
-    @coopmega = Directions.new(coopmega, session[:locale])
-    kiwifred = {from: 'Vulkan+19+0178+oslo', to: 'Kiwi+Fredensborg, Mollergata+56-58, 0179+Oslo'}
-    @kiwifred = Directions.new(kiwifred, session[:locale])
-    mathallen = {from: 'Vulkan+19+0178+oslo', to: 'Mathallen+Oslo, Vulkan 5, 0178+Oslo'}
-    @mathallen = Directions.new(mathallen, session[:locale])
-    dognvill = {from: 'Vulkan+19+0178+oslo', to: 'Kiwi+Fredensborg, Vulkan 12, 0178+Oslo'}
-    @dognvill = Directions.new(dognvill, session[:locale])
-    ferro = {from: 'Vulkan+19+0178+oslo', to: 'Ristorante+Ferro, Maridalsveien+13, 0175+Oslo'}
-    @ferro = Directions.new(ferro, session[:locale])
-    mcd = {from: 'Vulkan+19+0178+oslo', to: 'McDonalds, Thorvald+Meyers+gate+35-41, 0555+Oslo'}
-    @mcd = Directions.new(mcd, session[:locale])
-    grytelokket = {from: 'Vulkan+19+0178+oslo', to: 'McDonalds, Storgata+45, 0182+Oslo'}
-    @grytelokket = Directions.new(grytelokket, session[:locale])
-    subwayvul = {from: 'Vulkan+19+0178+oslo', to: 'Subway+grunerlokka, Seilduksgata+17, 0553+Oslo'}
-    @subwayvul = Directions.new(subwayvul, session[:locale])
-
-
+    butikker = CampusPolyline.where(campus: @campus)
+    @rema = butikker.where(store: 'rema').first
+    @coopmega = butikker.where(store: 'coopmega').first
+    @kiwifred = butikker.where(store: 'kiwifred').first
+    @mathallen = butikker.where(store: 'mathallen').first
+    @dognvill = butikker.where(store: 'dognvill').first
+    @ferro = butikker.where(store: 'ferro').first
+    @mcd = butikker.where(store: 'mcd').first
+    @grytelokket = butikker.where(store: 'grytelokket').first
+    @subwayvul = butikker.where(store: 'subwayvul').first
   end
 
   def change_locale

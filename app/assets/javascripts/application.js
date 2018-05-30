@@ -21,3 +21,14 @@ function displayForm(enable, disable) {
     document.getElementById(enable).style.display = 'block';
     document.getElementById(disable).style.display = 'none';
 }
+
+function scroll(){
+    document.getElementById('map').scrollIntoView(true);
+}
+
+function goToByScroll(id){
+    $('html,body').animate(
+        {
+            scrollTop: $("#" + id).offset().top - 150
+        }, 'slow');
+}

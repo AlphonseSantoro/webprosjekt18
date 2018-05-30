@@ -1,0 +1,3 @@
+class CampusPolyline < ApplicationRecord
+
+end

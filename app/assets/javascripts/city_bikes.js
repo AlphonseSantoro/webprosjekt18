@@ -1,3 +1,5 @@
+let markersArray = [];
+
 function city_bikes(lat, lng, markers, translate, text) {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: lat, lng: lng},
@@ -25,6 +27,7 @@ function city_bikes(lat, lng, markers, translate, text) {
         position: { lat: lat, lng: lng },
         icon: uni
     });
+    markersArray.push(campus);
     google.maps.event.addListener(campus, 'click', function() {
         infoWindow.setContent(text);
         infoWindow.open(map, campus);
@@ -37,6 +40,7 @@ function city_bikes(lat, lng, markers, translate, text) {
             position: { lat: markers[i].Center.Latitude, lng: markers[i].Center.Longitude },
             icon: icon
         });
+        markersArray.push(marker);
         google.maps.event.addListener(marker, 'click', function() {
             infoWindow.setContent('' + translate + ': ' + bikes);
             infoWindow.open(map, marker);
@@ -71,13 +75,16 @@ function places(lat, long, text) {
         scale: 0.07,
         strokeWeight: 1
     };
+
     let infoWindow = new google.maps.InfoWindow();
     bounds = new google.maps.LatLngBounds();
+
     let campus = new google.maps.Marker({
         map: map,
         position: { lat: lat, lng: long },
         icon: uni
     });
+    markersArray.push(campus);
     google.maps.event.addListener(campus, 'click', function() {
         infoWindow.setContent(text);
         infoWindow.open(map, campus);
@@ -101,6 +108,7 @@ function places(lat, long, text) {
             position: place.geometry.location,
             icon: cafe
         });
+        markersArray.push(marker);
 
         google.maps.event.addListener(marker, 'click', function() {
             let request = {placeId: place.place_id};
@@ -142,6 +150,7 @@ function campus() {
         position: { lat: campus.fjerdingen.lat, lng: campus.fjerdingen.lng },
         icon: uni
     });
+    markersArray.push(fjerdingen);
     google.maps.event.addListener(fjerdingen, 'click', function() {
         infoWindow.setContent('Campus Fjerdingen');
         infoWindow.open(map, fjerdingen);
@@ -152,6 +161,7 @@ function campus() {
         position: { lat: campus.vulkan.lat, lng: campus.vulkan.lng },
         icon: uni
     });
+    markersArray.push(vulkan);
     google.maps.event.addListener(vulkan, 'click', function() {
         infoWindow.setContent('Campus Vulkan');
         infoWindow.open(map, vulkan);
@@ -162,6 +172,7 @@ function campus() {
         position: { lat: campus.brennerivegen.lat, lng: campus.brennerivegen.lng },
         icon: uni
     });
+    markersArray.push(brennerivegen);
     google.maps.event.addListener(brennerivegen, 'click', function() {
         infoWindow.setContent('Campus Brennerivegen');
         infoWindow.open(map, brennerivegen);
@@ -172,6 +183,7 @@ function campus() {
         position: { lat: campus.kvadraturen.lat, lng: campus.kvadraturen.lng },
         icon: uni
     });
+    markersArray.push(kvadraturen);
     google.maps.event.addListener(kvadraturen, 'click', function() {
         infoWindow.setContent('Campus Kvadraturen');
         infoWindow.open(map, kvadraturen);
@@ -191,6 +203,7 @@ function butikkMarkor(centerlat, centerlng, btklat, btklng, tekst){
         map: map,
         position: { lat: btklat, lng: btklng }
     });
+    markersArray.push(marker);
     let infoWindow = new google.maps.InfoWindow();
     google.maps.event.addListener(marker, 'click', function() {
         infoWindow.setContent(tekst);
@@ -208,6 +221,7 @@ function butikkRute(list, bounds) {
     };
 
     removeLine();
+    removeMarkers();
     lines = [];
     for(let i = 0; i< list.length; i++){
         lines.push({lat: list[i][0], lng: list[i][1]})
@@ -219,11 +233,13 @@ function butikkRute(list, bounds) {
         map: map,
         icon: uni
     });
+    markersArray.push(marker);
     marker = new google.maps.Marker({
         position: {lat: list[list.length-1][0], lng: list[list.length-1][1]},
         title: 'B',
         map: map
     });
+    markersArray.push(marker);
     route = new google.maps.Polyline({
         path: lines,
         geodesic: true,
